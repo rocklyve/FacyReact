@@ -1,4 +1,4 @@
-![ProfileHeader](Extensions/ReadmeHeader.png?raw=true "ProfileHeader")
+![ProfileHeader](Extensions/ReadMeHeader.png?raw=true "ProfileHeader")
 
 
 <p align="center">
@@ -8,7 +8,7 @@ alt="Version: 1.0.0">
 </a>
 <img src="https://img.shields.io/badge/Swift-5.0-FFAC45.svg"
 alt="Swift: 5.0">
-<img src="https://img.shields.io/badge/Platforms-macOS-FF69B4.svg"
+<img src="https://img.shields.io/badge/Platforms-iOS-FF69B4.svg"
 alt="Platforms: iOS">
 <a href="https://github.com/JamitLabs/Accio/blob/stable/LICENSE">
 <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
