@@ -1,25 +1,17 @@
 <p align="center">
-<img src="https://raw.githubusercontent.com/JamitLabs/Accio/stable/Logo.png"
+<img src="https://raw.githubusercontent.com/rocklyve/FacyReact/stable/Extensions/ReadmeHeader.png"
 width=704>
 </p>
 
 <p align="center">
-<a href="https://app.bitrise.io/app/cf0587a25c78c7d4">
-<img src="https://app.bitrise.io/app/cf0587a25c78c7d4/status.svg?token=AlujqlsL_IVwxMLJJGPKvA&branch=stable"
-alt="Build Status">
-</a>
-<a href="https://codebeat.co/projects/github-com-jamitlabs-accio-stable">
-<img src="https://codebeat.co/badges/15b30938-aa93-4d43-a35c-e18105ea8b48"
-alt="Codebeat Badge">
-</a>
 <a href="https://github.com/JamitLabs/Accio/releases">
 <img src="https://img.shields.io/badge/Version-0.5.5-blue.svg"
-alt="Version: 0.5.5">
+alt="Version: 1.0.0">
 </a>
 <img src="https://img.shields.io/badge/Swift-5.0-FFAC45.svg"
 alt="Swift: 5.0">
 <img src="https://img.shields.io/badge/Platforms-macOS-FF69B4.svg"
-alt="Platforms: macOS">
+alt="Platforms: iOS">
 <a href="https://github.com/JamitLabs/Accio/blob/stable/LICENSE">
 <img src="https://img.shields.io/badge/License-MIT-lightgrey.svg"
 alt="License: MIT">
