@@ -1,7 +1,5 @@
-<p align="center">
-<img src="https://raw.githubusercontent.com/rocklyve/FacyReact/stable/Extensions/ReadmeHeader.png"
-width=704>
-</p>
+![ProfileHeader](Extensions/ReadmeHeader.png?raw=true "ProfileHeader")
+
 
 <p align="center">
 <a href="https://github.com/JamitLabs/Accio/releases">
