@@ -3,7 +3,7 @@
 
 <p align="center">
 <a href="https://github.com/JamitLabs/Accio/releases">
-<img src="https://img.shields.io/badge/Version-0.5.5-blue.svg"
+<img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"
 alt="Version: 1.0.0">
 </a>
 <img src="https://img.shields.io/badge/Swift-5.0-FFAC45.svg"
