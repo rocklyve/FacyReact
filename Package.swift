@@ -28,6 +28,8 @@ let package = Package(
 
         // SnapKit is a DSL to make Auto Layout easy on both iOS and OS X
         .package(url: "https://github.com/SnapKit/SnapKit.git", .branch("develop")),
+
+        .package(url: "https://github.com/Flinesoft/AnyMenu.git", .branch("stable")),
     ],
     targets: [
         .target(
@@ -40,6 +42,7 @@ let package = Package(
                 "SwiftyBeaver",
                 "SwiftyUserDefaults",
                 "SnapKit",
+                "AnyMenu"
             ],
             path: "App"
         ),

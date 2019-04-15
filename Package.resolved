@@ -2,6 +2,15 @@
   "object": {
     "pins": [
       {
+        "package": "AnyMenu",
+        "repositoryURL": "https://github.com/Flinesoft/AnyMenu.git",
+        "state": {
+          "branch": "stable",
+          "revision": "29c8dc0e5b10708eecbb41ec5d75fd0e67d09593",
+          "version": null
+        }
+      },
+      {
         "package": "HandySwift",
         "repositoryURL": "https://github.com/Flinesoft/HandySwift.git",
         "state": {

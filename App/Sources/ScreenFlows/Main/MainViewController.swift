@@ -20,6 +20,7 @@ class MainViewController: UIViewController {
         view.backgroundColor = .white
         view.addSubview(header)
         headerConfig()
+        setupNavigationController(withBarColor: .default)
         setupConstraints()
     }
 

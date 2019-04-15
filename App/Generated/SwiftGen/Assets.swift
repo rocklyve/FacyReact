@@ -32,6 +32,12 @@ internal enum Asset {
     }
   }
   internal enum Images {
+    internal static let history = UIImage(named: "history", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let info = UIImage(named: "info", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let liveView = UIImage(named: "liveView", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let logout = UIImage(named: "logout", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let settings = UIImage(named: "settings", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let signal = UIImage(named: "signal", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
   }
 }
 
