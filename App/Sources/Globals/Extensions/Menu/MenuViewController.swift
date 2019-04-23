@@ -42,7 +42,7 @@ class MenuViewController: UITableViewController {
         tableView.separatorStyle = .none
         showHeader()
 
-        view.backgroundColor = .blue
+        view.backgroundColor = Colors.Theme.secondary
     }
 
     func showHeader() {

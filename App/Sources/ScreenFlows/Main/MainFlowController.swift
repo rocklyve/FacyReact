@@ -33,8 +33,21 @@ class MainFlowController: InitialFlowController {
         let anyMenuViewCtrl = AnyMenuViewController(
             menuViewController: menuViewCtrl,
             contentViewController: navigationCtrl!,
-            menuOverlaysContent: false
+            menuOverlaysContent: false,
+            animation: MenuAnimation(
+                duration: 0.5,
+                menuViewActions: [],
+                contentViewActions: [
+                    .translate(x: UIScreen.main.bounds.width - 100, y: 0),
+                    .scale(x: 0.9, y: 0.9)
+                ],
+                timingParameters: UICubicTimingParameters(animationCurve: .easeInOut)
+            )
         )
+        anyMenuViewCtrl.menuShadowColor = .black
+        anyMenuViewCtrl.menuShadowRadius = 40
+        anyMenuViewCtrl.menuShadowOffset = CGSize(width: 0, height: 2)
+        anyMenuViewCtrl.menuShadowOpacity = 0.5
 
         anyMenuViewCtrl.present(in: &window)
     }
