@@ -53,6 +53,7 @@ internal enum Asset {
     internal static let circleCross = UIImage(named: "circleCross", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let brandLogo = UIImage(named: "brandLogo", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let defaultCornered = UIImage(named: "defaultCornered", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let image = UIImage(named: "Image", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let history = UIImage(named: "history", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let info = UIImage(named: "info", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let liveView = UIImage(named: "liveView", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
