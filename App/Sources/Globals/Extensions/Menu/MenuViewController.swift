@@ -72,18 +72,18 @@ class MenuViewController: UITableViewController {
     func showHeader() {
         let headerView = UIView()
         let headerImage = UIImageView()
-        headerImage.image = Images.info
+        headerImage.image = Images.brandLogo
         headerImage.contentMode = .scaleAspectFit
         headerView.addSubview(headerImage)
 
         headerImage.snp.makeConstraints { make in
-            make.height.equalTo(40)
-            make.width.equalTo(headerImage.snp.height).multipliedBy(600 / 148)
+            make.height.equalTo(110)
+            make.width.equalTo(headerImage.snp.height).multipliedBy(826 / 278)
             make.left.equalTo(24)
             make.top.equalToSuperview().offset(20)
         }
 
-        headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 100)
+        headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 140)
         self.tableView.tableHeaderView = headerView
     }
 
