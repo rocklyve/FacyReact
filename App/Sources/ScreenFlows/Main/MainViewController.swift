@@ -8,6 +8,7 @@ import UIKit
 
 protocol MainFlowDelegate: class {
     // TODO: not yet implemented
+
 }
 
 class MainViewController: UIViewController {
