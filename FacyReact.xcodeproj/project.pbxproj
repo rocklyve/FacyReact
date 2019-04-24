@@ -8,17 +8,33 @@
 
 /* Begin PBXBuildFile section */
 		15A8639236D6F65ADABAEB69FEAA44D2 /* SwiftyBeaver.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */; };
+		1A332F336EC2ED86638A44040444E973 /* SwiftEntryKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 355841F29C3AA9CD4EAE1BD695267602 /* SwiftEntryKit.framework */; };
 		27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */; };
 		2C21E85E5EAA6761A0E37AA4540B41A2 /* SnapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 51AFF9138C319FD33EA21AB13E308186 /* SnapKit.framework */; };
 		38E5667A2264A2F40088DD68 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E566792264A2F40088DD68 /* MenuViewController.swift */; };
 		38E5667C2264A3050088DD68 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5667B2264A3050088DD68 /* MenuCell.swift */; };
-		38E5667E2264A4E20088DD68 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5667D2264A4E20088DD68 /* UIViewControllerExtension.swift */; };
+		38FC7F762270AA2A0026D241 /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F732270AA2A0026D241 /* SettingsTableViewController.swift */; };
+		38FC7F772270AA2A0026D241 /* SettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F742270AA2A0026D241 /* SettingsFlowController.swift */; };
+		38FC7F782270AA2A0026D241 /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F752270AA2A0026D241 /* SettingsCell.swift */; };
+		38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */; };
+		38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */; };
+		38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */; };
+		38FC7F8B2270AA820026D241 /* ManualConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F852270AA820026D241 /* ManualConnectionCell.swift */; };
+		38FC7F8C2270AA820026D241 /* ConnectBleDeviceFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F862270AA820026D241 /* ConnectBleDeviceFlowController.swift */; };
+		38FC7F8D2270AA820026D241 /* ConnectBleDeviceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F872270AA820026D241 /* ConnectBleDeviceViewController.swift */; };
+		38FC7F942270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F902270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift */; };
+		38FC7F952270AAF40026D241 /* BluetoothConnectorStateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F922270AAF40026D241 /* BluetoothConnectorStateObserver.swift */; };
+		38FC7F962270AAF40026D241 /* BluetoothConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F932270AAF40026D241 /* BluetoothConnector.swift */; };
+		38FC7F982270AB330026D241 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */; };
+		38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */; };
+		38FC7F9D2270AE490026D241 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9C2270AE490026D241 /* Images.swift */; };
 		52961F10B7B6DC1B8A7030E3F986B204 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
 		64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		820103AA1ED87B0600FB7007 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* AppTests.swift */; };
 		8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E52211E1DA007AAAF3 /* BartyCrouch.swift */; };
 		8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4E92211E4A8007AAAF3 /* Assets.swift */; };
 		8218E4EE2211E9B8007AAAF3 /* MainFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8218E4ED2211E9B8007AAAF3 /* MainFlowController.swift */; };
+		822905D9AE752BCB6E585F33BCAAA3D0 /* QuickLayout.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 768CBCD637F56FC182511A12AB69F742 /* QuickLayout.framework */; };
 		823F74041ED84DAC0022317D /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 823F73EC1ED84DAC0022317D /* Images.xcassets */; };
 		823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F73EE1ED84DAC0022317D /* AppDelegate.swift */; };
 		823F74061ED84DAC0022317D /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 823F73EF1ED84DAC0022317D /* MainViewController.swift */; };
@@ -35,6 +51,7 @@
 		8D5FB08D3FF621DCE0E82F08B234DEB6 /* HandyUIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */; };
 		9F3DEB27A4A7B5D6466231797225FB03 /* HandySwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */; };
 		A3CCA000F5BA817D7FFDF49040F3FB6A /* MungoHealer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */; };
+		A691E1A4610668C8D4FEDB0FA59184E6 /* Hero.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4610B63572B2B54F3895CFC588AB7499 /* Hero.framework */; };
 		D027A1127DAFAFB21435634BD2BB10D3 /* Imperio.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */; };
 		FA1255921E0855B3F4C3FAF8D7E6B5A0 /* AnyMenu.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 56291D66C1A91860F44D6772B587BA4C /* AnyMenu.framework */; };
 /* End PBXBuildFile section */
@@ -101,12 +118,32 @@
 
 /* Begin PBXFileReference section */
 		2E288081205188AD0051EC14 /* beak.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = beak.swift; sourceTree = "<group>"; };
+		355841F29C3AA9CD4EAE1BD695267602 /* SwiftEntryKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftEntryKit.framework; path = Dependencies/iOS/SwiftEntryKit.framework; sourceTree = "<group>"; };
 		38E566792264A2F40088DD68 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		38E5667B2264A3050088DD68 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
-		38E5667D2264A4E20088DD68 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExtension.swift; sourceTree = "<group>"; };
+		38FC7F732270AA2A0026D241 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		38FC7F742270AA2A0026D241 /* SettingsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFlowController.swift; sourceTree = "<group>"; };
+		38FC7F752270AA2A0026D241 /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		38FC7F7D2270AA4E0026D241 /* SettingsTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		38FC7F7E2270AA4E0026D241 /* SettingsFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFlowController.swift; sourceTree = "<group>"; };
+		38FC7F7F2270AA4E0026D241 /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionFlowController.swift; sourceTree = "<group>"; };
+		38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionTableViewController.swift; sourceTree = "<group>"; };
+		38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionScanCell.swift; sourceTree = "<group>"; };
+		38FC7F852270AA820026D241 /* ManualConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionCell.swift; sourceTree = "<group>"; };
+		38FC7F862270AA820026D241 /* ConnectBleDeviceFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectBleDeviceFlowController.swift; sourceTree = "<group>"; };
+		38FC7F872270AA820026D241 /* ConnectBleDeviceViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConnectBleDeviceViewController.swift; sourceTree = "<group>"; };
+		38FC7F902270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnectorNotificationPostMaster.swift; sourceTree = "<group>"; };
+		38FC7F922270AAF40026D241 /* BluetoothConnectorStateObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnectorStateObserver.swift; sourceTree = "<group>"; };
+		38FC7F932270AAF40026D241 /* BluetoothConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnector.swift; sourceTree = "<group>"; };
+		38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = "../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Extensions/UIViewControllerExtension.swift"; sourceTree = "<group>"; };
+		38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftEntryKitOptions.swift; path = "../../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Elements/Views/SwiftEntryKitOptions.swift"; sourceTree = "<group>"; };
+		38FC7F9C2270AE490026D241 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		4610B63572B2B54F3895CFC588AB7499 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Hero.framework; path = Dependencies/iOS/Hero.framework; sourceTree = "<group>"; };
 		51AFF9138C319FD33EA21AB13E308186 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		56291D66C1A91860F44D6772B587BA4C /* AnyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AnyMenu.framework; path = Dependencies/iOS/AnyMenu.framework; sourceTree = "<group>"; };
 		5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SwiftyUserDefaults.framework; path = Dependencies/iOS/SwiftyUserDefaults.framework; sourceTree = "<group>"; };
+		768CBCD637F56FC182511A12AB69F742 /* QuickLayout.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = QuickLayout.framework; path = Dependencies/iOS/QuickLayout.framework; sourceTree = "<group>"; };
 		7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = MungoHealer.framework; path = Dependencies/iOS/MungoHealer.framework; sourceTree = "<group>"; };
 		820103A81ED87AE000FB7007 /* AppTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppTests.swift; sourceTree = "<group>"; };
 		8207790420E4D28300FCF461 /* App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = App.entitlements; sourceTree = "<group>"; };
@@ -169,6 +206,9 @@
 				27B1E850C3E44BBDBCC2741B11408AF2 /* SwiftyUserDefaults.framework in Frameworks */,
 				2C21E85E5EAA6761A0E37AA4540B41A2 /* SnapKit.framework in Frameworks */,
 				FA1255921E0855B3F4C3FAF8D7E6B5A0 /* AnyMenu.framework in Frameworks */,
+				A691E1A4610668C8D4FEDB0FA59184E6 /* Hero.framework in Frameworks */,
+				822905D9AE752BCB6E585F33BCAAA3D0 /* QuickLayout.framework in Frameworks */,
+				1A332F336EC2ED86638A44040444E973 /* SwiftEntryKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -206,6 +246,93 @@
 				38E5667B2264A3050088DD68 /* MenuCell.swift */,
 			);
 			path = Menu;
+			sourceTree = "<group>";
+		};
+		38FC7F722270AA2A0026D241 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F732270AA2A0026D241 /* SettingsTableViewController.swift */,
+				38FC7F742270AA2A0026D241 /* SettingsFlowController.swift */,
+				38FC7F752270AA2A0026D241 /* SettingsCell.swift */,
+			);
+			name = Settings;
+			path = "../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/ScreenFlows/MenuItems/Settings";
+			sourceTree = "<group>";
+		};
+		38FC7F792270AA330026D241 /* MenuItems */ = {
+			isa = PBXGroup;
+			children = (
+				8298175C20DBB5D90021ED19 /* Main */,
+				38FC7F7C2270AA4E0026D241 /* Settings */,
+			);
+			path = MenuItems;
+			sourceTree = "<group>";
+		};
+		38FC7F7C2270AA4E0026D241 /* Settings */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F7D2270AA4E0026D241 /* SettingsTableViewController.swift */,
+				38FC7F7E2270AA4E0026D241 /* SettingsFlowController.swift */,
+				38FC7F7F2270AA4E0026D241 /* SettingsCell.swift */,
+			);
+			path = Settings;
+			sourceTree = "<group>";
+		};
+		38FC7F802270AA820026D241 /* ConnectBleDevice */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F812270AA820026D241 /* ManualConnection */,
+				38FC7F862270AA820026D241 /* ConnectBleDeviceFlowController.swift */,
+				38FC7F872270AA820026D241 /* ConnectBleDeviceViewController.swift */,
+			);
+			name = ConnectBleDevice;
+			path = "../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/ScreenFlows/ConnectBleDevice";
+			sourceTree = "<group>";
+		};
+		38FC7F812270AA820026D241 /* ManualConnection */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */,
+				38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */,
+				38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */,
+				38FC7F852270AA820026D241 /* ManualConnectionCell.swift */,
+			);
+			path = ManualConnection;
+			sourceTree = "<group>";
+		};
+		38FC7F8E2270AAF40026D241 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F8F2270AAF40026D241 /* PostMaster */,
+				38FC7F912270AAF40026D241 /* StateObserver */,
+				38FC7F932270AAF40026D241 /* BluetoothConnector.swift */,
+			);
+			name = Bluetooth;
+			path = "../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Networking/Bluetooth";
+			sourceTree = "<group>";
+		};
+		38FC7F8F2270AAF40026D241 /* PostMaster */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F902270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift */,
+			);
+			path = PostMaster;
+			sourceTree = "<group>";
+		};
+		38FC7F912270AAF40026D241 /* StateObserver */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F922270AAF40026D241 /* BluetoothConnectorStateObserver.swift */,
+			);
+			path = StateObserver;
+			sourceTree = "<group>";
+		};
+		38FC7F992270AB780026D241 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		823F73B01ED84C3A0022317D = {
@@ -349,8 +476,9 @@
 		824A00AB20FCF15900FBF35C /* Extensions */ = {
 			isa = PBXGroup;
 			children = (
+				38FC7F992270AB780026D241 /* Views */,
 				38E566782264A2E70088DD68 /* Menu */,
-				38E5667D2264A4E20088DD68 /* UIViewControllerExtension.swift */,
+				38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -369,6 +497,7 @@
 				8218E4E92211E4A8007AAAF3 /* Assets.swift */,
 				823F74391ED8679D0022317D /* Storyboards.swift */,
 				823F743A1ED8679D0022317D /* Strings.swift */,
+				38FC7F9C2270AE490026D241 /* Images.swift */,
 			);
 			path = SwiftGen;
 			sourceTree = "<group>";
@@ -376,7 +505,9 @@
 		8298175B20DBB5C00021ED19 /* ScreenFlows */ = {
 			isa = PBXGroup;
 			children = (
-				8298175C20DBB5D90021ED19 /* Main */,
+				38FC7F802270AA820026D241 /* ConnectBleDevice */,
+				38FC7F792270AA330026D241 /* MenuItems */,
+				38FC7F722270AA2A0026D241 /* Settings */,
 			);
 			path = ScreenFlows;
 			sourceTree = "<group>";
@@ -393,6 +524,7 @@
 		8298175E20DBB60C0021ED19 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				38FC7F8E2270AAF40026D241 /* Bluetooth */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -461,9 +593,12 @@
 				56291D66C1A91860F44D6772B587BA4C /* AnyMenu.framework */,
 				9AD02D3896305AF744689F5981AFDF1B /* HandySwift.framework */,
 				D348A3B245F7AEEF8DD4FE1E8C95DD13 /* HandyUIKit.framework */,
+				4610B63572B2B54F3895CFC588AB7499 /* Hero.framework */,
 				FA1DDC5F20E3285DB5BC403D5CAB936A /* Imperio.framework */,
 				7E8C3DB4F0BC7818CD8F416A0D854ED7 /* MungoHealer.framework */,
+				768CBCD637F56FC182511A12AB69F742 /* QuickLayout.framework */,
 				51AFF9138C319FD33EA21AB13E308186 /* SnapKit.framework */,
+				355841F29C3AA9CD4EAE1BD695267602 /* SwiftEntryKit.framework */,
 				D331CAF666A69CEDF6293DE54F2A32AD /* SwiftyBeaver.framework */,
 				5CDE68B13A37E02C71246E4AD57D43EC /* SwiftyUserDefaults.framework */,
 			);
@@ -701,9 +836,12 @@
 				"$(SRCROOT)/Dependencies/iOS/AnyMenu.framework",
 				"$(SRCROOT)/Dependencies/iOS/HandySwift.framework",
 				"$(SRCROOT)/Dependencies/iOS/HandyUIKit.framework",
+				"$(SRCROOT)/Dependencies/iOS/Hero.framework",
 				"$(SRCROOT)/Dependencies/iOS/Imperio.framework",
 				"$(SRCROOT)/Dependencies/iOS/MungoHealer.framework",
+				"$(SRCROOT)/Dependencies/iOS/QuickLayout.framework",
 				"$(SRCROOT)/Dependencies/iOS/SnapKit.framework",
+				"$(SRCROOT)/Dependencies/iOS/SwiftEntryKit.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyBeaver.framework",
 				"$(SRCROOT)/Dependencies/iOS/SwiftyUserDefaults.framework",
 			);
@@ -712,9 +850,12 @@
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/AnyMenu.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/HandySwift.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/HandyUIKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Hero.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/Imperio.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/MungoHealer.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/QuickLayout.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SnapKit.framework",
+				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftEntryKit.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyBeaver.framework",
 				"$(BUILT_PRODUCTS_DIR)/$(FRAMEWORKS_FOLDER_PATH)/SwiftyUserDefaults.framework",
 			);
@@ -731,17 +872,31 @@
 			files = (
 				823F743C1ED8679D0022317D /* Storyboards.swift in Sources */,
 				823F74061ED84DAC0022317D /* MainViewController.swift in Sources */,
+				38FC7F952270AAF40026D241 /* BluetoothConnectorStateObserver.swift in Sources */,
 				38E5667C2264A3050088DD68 /* MenuCell.swift in Sources */,
+				38FC7F9D2270AE490026D241 /* Images.swift in Sources */,
+				38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */,
+				38FC7F962270AAF40026D241 /* BluetoothConnector.swift in Sources */,
+				38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */,
+				38FC7F942270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
 				8218E4EE2211E9B8007AAAF3 /* MainFlowController.swift in Sources */,
+				38FC7F8B2270AA820026D241 /* ManualConnectionCell.swift in Sources */,
 				38E5667A2264A2F40088DD68 /* MenuViewController.swift in Sources */,
+				38FC7F762270AA2A0026D241 /* SettingsTableViewController.swift in Sources */,
+				38FC7F8C2270AA820026D241 /* ConnectBleDeviceFlowController.swift in Sources */,
+				38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */,
 				8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */,
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
+				38FC7F772270AA2A0026D241 /* SettingsFlowController.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
-				38E5667E2264A4E20088DD68 /* UIViewControllerExtension.swift in Sources */,
 				828A920F22146058005B38B5 /* ErrorHandler.swift in Sources */,
+				38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */,
 				8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */,
+				38FC7F982270AB330026D241 /* UIViewControllerExtension.swift in Sources */,
+				38FC7F782270AA2A0026D241 /* SettingsCell.swift in Sources */,
 				82CC295820DBDB2000C61C6E /* Branding.swift in Sources */,
+				38FC7F8D2270AA820026D241 /* ConnectBleDeviceViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

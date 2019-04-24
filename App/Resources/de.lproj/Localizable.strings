@@ -1,2 +1,68 @@
 
+"Auth.identifyYourself" = "Identifiziere dich selbst!";
 
+"ConnectBleDevice.description" = "Bitte sicherstellen, dass das Wearable verbunden und eingeschaltet ist";
+
+"ConnectBleDevice.headline" = "Wearable verbinden";
+
+"ConnectBleDevice.manualConnection" = "Manuell verbinden";
+
+"ConnectBleDevice.scanQRCode" = "QR-Code scannen";
+
+"Login.buttonText" = "Los geht's";
+
+"Login.headline" = "Einloggen";
+
+"ManualConnection.scanCellTitle" = "Suchen";
+
+"ManualConnection.searchTitle" = "Es wurden ### Geräte gefunden. Nach weiteren Geräte suchen?";
+
+"ManualConnection.stopScan" = "Stopp";
+
+"ManualConnection.stopTitle" = "Es wird nach verfügbaren Wearable-Geräten gesucht...";
+
+"ManualConnection.title" = "Wearable verbinden";
+
+"Menu.info" = "Info";
+
+"Menu.liveView" = "Live View";
+
+"Menu.logout" = "Logout";
+
+"Menu.newMeasurement" = "Neue Messung";
+
+"Menu.overviewMeasurements" = "Übersicht Messungen";
+
+"Menu.settings" = "Einstellungen";
+
+"Settings.liveView.intervalStandard" = "Intervallstandard";
+
+"Settings.lockAutomation" = "Automatisch sperren";
+
+"Settings.NewMeasurement.referenceTypeStandard" = "Bezugsart Standard";
+
+"Settings.SectionTitle.app" = "App";
+
+"Settings.SectionTitle.liveView" = "Live View";
+
+"Settings.SectionTitle.newMeasurement" = "Neue Messung";
+
+"Settings.SectionTitle.wearable" = "Wearable";
+
+"Settings.title" = "Einstellungen";
+
+"Settings.wearable.deleteAllMeasurements" = "Alle Messungen vom Wearable löschen";
+
+"Settings.wearable.resetWearable" = "Wearable zurücksetzen";
+
+"Settings.wearable.retryMeasurement" = "Messwiederholung";
+
+"Settings.wearable.wearable" = "Wearable";
+
+"Settings.WearableStatus.notConnected" = "Nicht verbunden";
+
+"Unlock.buttonTitle" = "Entsperren";
+
+"Unlock.description" = "Die App wurde aus Sicherheitsgründen gesperrt.";
+
+"Unlock.headline" = "App gesperrt";

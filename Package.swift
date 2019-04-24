@@ -30,6 +30,10 @@ let package = Package(
         .package(url: "https://github.com/SnapKit/SnapKit.git", .branch("develop")),
 
         .package(url: "https://github.com/Flinesoft/AnyMenu.git", .branch("stable")),
+
+        .package(url: "https://github.com/HeroTransitions/Hero.git", .upToNextMajor(from: "1.4.0")),
+
+        .package(url: "https://github.com/rocklyve/SwiftEntryKit.git", .branch("master"))
     ],
     targets: [
         .target(
@@ -42,7 +46,9 @@ let package = Package(
                 "SwiftyBeaver",
                 "SwiftyUserDefaults",
                 "SnapKit",
-                "AnyMenu"
+                "AnyMenu",
+                "Hero",
+                "SwiftEntryKit"
             ],
             path: "App"
         ),
