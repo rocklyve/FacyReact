@@ -1,2 +1,68 @@
 
+"Auth.identifyYourself" = "Identify yourself!";
 
+"ConnectBleDevice.description" = "Please make sure, that your device is turned on";
+
+"ConnectBleDevice.headline" = "Connect Pegelmeter";
+
+"ConnectBleDevice.manualConnection" = "Connect manually";
+
+"ConnectBleDevice.scanQRCode" = "Scan QR-Code";
+
+"Login.buttonText" = "Let's go";
+
+"Login.headline" = "Login";
+
+"ManualConnection.scanCellTitle" = "Search";
+
+"ManualConnection.searchTitle" = "### devices found. Would you like to search for more devices?";
+
+"ManualConnection.stopScan" = "Stop";
+
+"ManualConnection.stopTitle" = "Search for PegelMeter devices...";
+
+"ManualConnection.title" = "Connect Pegelmeter";
+
+"Menu.info" = "Info";
+
+"Menu.liveView" = "Live View";
+
+"Menu.logout" = "Logout";
+
+"Menu.newMeasurement" = "New measurement";
+
+"Menu.overviewMeasurements" = "Overview measurements";
+
+"Menu.settings" = "Settings";
+
+"Settings.liveView.intervalStandard" = "Interval standard";
+
+"Settings.lockAutomation" = "Lock Automation";
+
+"Settings.NewMeasurement.referenceTypeStandard" = "Reference type standard";
+
+"Settings.pegelmeter.deleteAllMeasurements" = "Delete all measurements on Pegelmeter";
+
+"Settings.pegelmeter.pegelmeter" = "Pegelmeter";
+
+"Settings.pegelmeter.resetPegelmeter" = "Reset Pegelmeter";
+
+"Settings.pegelmeter.retryMeasurement" = "Retry Measurement";
+
+"Settings.PegelmeterStatus.notConnected" = "Not connected";
+
+"Settings.SectionTitle.app" = "App";
+
+"Settings.SectionTitle.liveView" = "Live view";
+
+"Settings.SectionTitle.newMeasurement" = "New measurement";
+
+"Settings.SectionTitle.pegelmeter" = "Pegelmeter";
+
+"Settings.title" = "Settings";
+
+"Unlock.buttonTitle" = "Unlock";
+
+"Unlock.description" = "The app is locked for security reasons";
+
+"Unlock.headline" = "App locked";

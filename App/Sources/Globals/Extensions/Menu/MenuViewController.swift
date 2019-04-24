@@ -18,48 +18,72 @@ struct ViewModel {
     var sections: [Section]
 }
 
+protocol MenuFlowDelegate: AnyObject {
+    func startNewMeasurement()
+    func settings()
+}
+
+// swiftlint:disable class_name_suffix_table_view_controller
 class MenuViewController: UITableViewController {
+    weak var flowDelegate: MenuFlowDelegate?
+
+    let cellReuseIdentifier: String = "basicCell"
+
     // MARK: - Computed Instance Properties
     override var preferredStatusBarStyle: UIStatusBarStyle {
         return .lightContent
     }
-    var viewModel = ViewModel(sections: [ ViewModel.Section (
-        items: [
-            MenuCellModel(title: "Neue Messung", icon: Images.signal),
-            MenuCellModel(title: "Übersicht Messungen", icon: Images.history),
-            MenuCellModel(title: "Live View", icon: Images.liveView),
-            MenuCellModel(title: "Einstellungen", icon: Images.settings),
-            MenuCellModel(title: "Info", icon: Images.info),
-            MenuCellModel(title: "Logout", icon: Images.logout)
+
+    var viewModel = ViewModel(
+        sections: [
+            ViewModel.Section (
+                items: [
+                    MenuCellModel(title: L10n.Menu.newMeasurement, icon: Images.signal),
+                    MenuCellModel(title: L10n.Menu.overviewMeasurements, icon: Images.history)
+                ]
+            ),
+            ViewModel.Section(
+                items: [
+                    MenuCellModel(title: L10n.Menu.liveView, icon: Images.liveView)
+                ]
+            ),
+            ViewModel.Section(
+                items: [
+                    MenuCellModel(title: L10n.Menu.settings, icon: Images.settings),
+                    MenuCellModel(title: L10n.Menu.info, icon: Images.info),
+                    MenuCellModel(title: L10n.Menu.logout, icon: Images.logout)
+                ]
+            )
         ]
-        )])
+    )
 
     // MARK: - View Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.register(MenuCell.self, forCellReuseIdentifier: "basicCell")
+        tableView.allowsMultipleSelection = false
+        tableView.register(MenuCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.separatorStyle = .none
+
         showHeader()
 
-        view.backgroundColor = Colors.Theme.secondary
+        view.backgroundColor = Colors.Vibrants.blue
     }
 
     func showHeader() {
         let headerView = UIView()
         let headerImage = UIImageView()
-        headerImage.image = Images.liveView
+        headerImage.image = Images.info
         headerImage.contentMode = .scaleAspectFit
         headerView.addSubview(headerImage)
 
         headerImage.snp.makeConstraints { make in
-            make.width.equalTo(((headerImage.image?.size.width)! / (headerImage.image?.size.height)!) * 40)
             make.height.equalTo(40)
+            make.width.equalTo(headerImage.snp.height).multipliedBy(600 / 148)
             make.left.equalTo(24)
             make.top.equalToSuperview().offset(20)
         }
 
-        // TODO: maybe push this to snapkit
         headerView.frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 100)
         self.tableView.tableHeaderView = headerView
     }
@@ -78,7 +102,7 @@ class MenuViewController: UITableViewController {
     }
 
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "basicCell") as! MenuCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellReuseIdentifier) as! MenuCell
         cell.backgroundColor = .clear
         //        cell.accessoryType = currentIndex == indexPath.row ? .checkmark : .none
 
@@ -86,6 +110,39 @@ class MenuViewController: UITableViewController {
         cell.cellModel = cellModel
 
         return cell
+    }
+
+    override func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        if section != 2 {
+            let footerView = UIView()
+            footerView.backgroundColor = UIColor.clear
+            let separatorView = UIView()
+
+            footerView.addSubview(separatorView)
+            separatorView.snp.makeConstraints { make in
+                make.height.equalTo(1)
+                make.width.equalToSuperview()
+                make.centerX.centerY.equalToSuperview()
+            }
+
+            let gradient = CAGradientLayer()
+            gradient.colors = [UIColor.white.cgColor, UIColor.clear]
+            gradient.locations = [0.0, 1.0]
+            gradient.startPoint = CGPoint(x: 0.4, y: 1.0)
+            gradient.endPoint = CGPoint(x: 0.9, y: 1.0)
+            gradient.frame = CGRect(x: 0.0, y: 0.0, width: self.view.frame.size.width, height: 1)
+            separatorView.layer.insertSublayer(gradient, at: 0)
+
+            return footerView
+        } else {
+            let footerView = UIView()
+            footerView.backgroundColor = UIColor.clear
+            return footerView
+        }
+    }
+
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 33
     }
 
     // MARK: - UITableVIewDelegate Protocol Implementation
@@ -96,19 +153,14 @@ class MenuViewController: UITableViewController {
         case 0:
             switch indexPath.row {
             case 0:
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
+                flowDelegate?.startNewMeasurement()
 
             case 1:
                 anyMenuViewController?.contentViewController = MainViewController()
                 anyMenuViewController?.closeMenu()
 
-            case 2:
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
-
             default:
-                fatalError()
+                log.error("defaultCase in TableView")
             }
 
         case 1:
@@ -118,32 +170,31 @@ class MenuViewController: UITableViewController {
                 anyMenuViewController?.closeMenu()
 
             default:
-                fatalError()
+                log.error("defaultCase in TableView")
             }
 
         case 2:
             switch indexPath.row {
-            case 0:
+            case 0: // settings
+                flowDelegate?.settings()
+
+            case 1: // info
                 anyMenuViewController?.contentViewController = MainViewController()
                 anyMenuViewController?.closeMenu()
 
-            case 1:
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
-
-            case 2:
+            case 2: // logout
                 anyMenuViewController?.contentViewController = MainViewController()
                 anyMenuViewController?.closeMenu()
 
             default:
-                fatalError()
+                anyMenuViewController?.contentViewController = MainViewController()
+                anyMenuViewController?.closeMenu()
             }
 
         default:
-            fatalError()
+            log.error("defaultCase in TableView")
         }
 
         tableView.reloadData()
     }
 }
-

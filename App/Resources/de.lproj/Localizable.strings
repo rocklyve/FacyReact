@@ -1,2 +1,68 @@
 
+"Auth.identifyYourself" = "Identifiziere dich selbst!";
 
+"ConnectBleDevice.description" = "Bitte sicherstellen, dass der Pegel Meter verbunden und eingeschaltet ist";
+
+"ConnectBleDevice.headline" = "Pegelmeter verbinden";
+
+"ConnectBleDevice.manualConnection" = "Manuell verbinden";
+
+"ConnectBleDevice.scanQRCode" = "QR-Code scannen";
+
+"Login.buttonText" = "Los geht's";
+
+"Login.headline" = "Einloggen";
+
+"ManualConnection.scanCellTitle" = "Suchen";
+
+"ManualConnection.searchTitle" = "Es wurden ### Geräte gefunden. Nach weiteren Geräte suchen?";
+
+"ManualConnection.stopScan" = "Stopp";
+
+"ManualConnection.stopTitle" = "Es wird nach verfügbaren PegelMeter-Geräten gesucht...";
+
+"ManualConnection.title" = "PegelMeter verbinden";
+
+"Menu.info" = "Info";
+
+"Menu.liveView" = "Live View";
+
+"Menu.logout" = "Logout";
+
+"Menu.newMeasurement" = "Neue Messung";
+
+"Menu.overviewMeasurements" = "Übersicht Messungen";
+
+"Menu.settings" = "Einstellungen";
+
+"Settings.liveView.intervalStandard" = "Intervallstandard";
+
+"Settings.lockAutomation" = "Automatisch sperren";
+
+"Settings.NewMeasurement.referenceTypeStandard" = "Bezugsart Standard";
+
+"Settings.pegelmeter.deleteAllMeasurements" = "Alle Messungen vom Pegelmeter löschen";
+
+"Settings.pegelmeter.pegelmeter" = "Pegelmeter";
+
+"Settings.pegelmeter.resetPegelmeter" = "Pegelmeter zurücksetzen";
+
+"Settings.pegelmeter.retryMeasurement" = "Messwiederholung";
+
+"Settings.PegelmeterStatus.notConnected" = "Nicht verbunden";
+
+"Settings.SectionTitle.app" = "App";
+
+"Settings.SectionTitle.liveView" = "Live View";
+
+"Settings.SectionTitle.newMeasurement" = "Neue Messung";
+
+"Settings.SectionTitle.pegelmeter" = "Pegelmeter";
+
+"Settings.title" = "Einstellungen";
+
+"Unlock.buttonTitle" = "Entsperren";
+
+"Unlock.description" = "Die App wurde aus Sicherheitsgründen gesperrt.";
+
+"Unlock.headline" = "App gesperrt";

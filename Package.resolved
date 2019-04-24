@@ -29,6 +29,15 @@
         }
       },
       {
+        "package": "Hero",
+        "repositoryURL": "https://github.com/HeroTransitions/Hero.git",
+        "state": {
+          "branch": null,
+          "revision": "7d541ecbf8f53edc87bf51c54ab207bddc39e4cb",
+          "version": "1.4.0"
+        }
+      },
+      {
         "package": "Imperio",
         "repositoryURL": "https://github.com/Flinesoft/Imperio.git",
         "state": {
@@ -65,11 +74,20 @@
         }
       },
       {
+        "package": "QuickLayout",
+        "repositoryURL": "https://github.com/rocklyve/QuickLayout.git",
+        "state": {
+          "branch": "master",
+          "revision": "649dcf1f08c2dd10de596f08ecf8ed3be0a7b49a",
+          "version": null
+        }
+      },
+      {
         "package": "SnapKit",
         "repositoryURL": "https://github.com/SnapKit/SnapKit.git",
         "state": {
           "branch": "develop",
-          "revision": "eea05d74f073696202cd0bb8e744e4c89781a414",
+          "revision": "328b53b7e3d3d0f32d03adaf7c84297a7310cdf5",
           "version": null
         }
       },
@@ -80,6 +98,15 @@
           "branch": null,
           "revision": "883f0b0623ae55f41f42e2399dab428017896448",
           "version": "1.5.0"
+        }
+      },
+      {
+        "package": "SwiftEntryKit",
+        "repositoryURL": "https://github.com/rocklyve/SwiftEntryKit.git",
+        "state": {
+          "branch": "master",
+          "revision": "80c20b346d5a33fb01c81c3fe49f1a4e6bd43a8b",
+          "version": null
         }
       },
       {
