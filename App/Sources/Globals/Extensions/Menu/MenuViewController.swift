@@ -19,7 +19,6 @@ struct ViewModel {
 }
 
 protocol MenuFlowDelegate: AnyObject {
-    func startNewMeasurement()
     func settings()
 }
 
@@ -153,7 +152,8 @@ class MenuViewController: UITableViewController {
         case 0:
             switch indexPath.row {
             case 0:
-                flowDelegate?.startNewMeasurement()
+                anyMenuViewController?.contentViewController = MainViewController()
+                anyMenuViewController?.closeMenu()
 
             case 1:
                 anyMenuViewController?.contentViewController = MainViewController()

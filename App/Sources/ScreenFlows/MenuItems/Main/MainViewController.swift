@@ -7,8 +7,7 @@ import SnapKit
 import UIKit
 
 protocol MainFlowDelegate: class {
-    // TODO: not yet implemented
-
+    func connectBleDevice()
 }
 
 class MainViewController: UIViewController {
@@ -22,6 +21,7 @@ class MainViewController: UIViewController {
         view.addSubview(header)
         headerConfig()
         setupNavigationController(withBarColor: .default)
+        setLeftNavBarMenuButton()
         setupConstraints()
     }
 

@@ -3,7 +3,7 @@
 
 "ConnectBleDevice.description" = "Please make sure, that your device is turned on";
 
-"ConnectBleDevice.headline" = "Connect Pegelmeter";
+"ConnectBleDevice.headline" = "Connect Wearable";
 
 "ConnectBleDevice.manualConnection" = "Connect manually";
 
@@ -19,9 +19,9 @@
 
 "ManualConnection.stopScan" = "Stop";
 
-"ManualConnection.stopTitle" = "Search for PegelMeter devices...";
+"ManualConnection.stopTitle" = "Search for Wearable devices...";
 
-"ManualConnection.title" = "Connect Pegelmeter";
+"ManualConnection.title" = "Connect Wearable";
 
 "Menu.info" = "Info";
 
@@ -41,25 +41,25 @@
 
 "Settings.NewMeasurement.referenceTypeStandard" = "Reference type standard";
 
-"Settings.pegelmeter.deleteAllMeasurements" = "Delete all measurements on Pegelmeter";
-
-"Settings.pegelmeter.pegelmeter" = "Pegelmeter";
-
-"Settings.pegelmeter.resetPegelmeter" = "Reset Pegelmeter";
-
-"Settings.pegelmeter.retryMeasurement" = "Retry Measurement";
-
-"Settings.PegelmeterStatus.notConnected" = "Not connected";
-
 "Settings.SectionTitle.app" = "App";
 
 "Settings.SectionTitle.liveView" = "Live view";
 
 "Settings.SectionTitle.newMeasurement" = "New measurement";
 
-"Settings.SectionTitle.pegelmeter" = "Pegelmeter";
+"Settings.SectionTitle.wearable" = "Wearable";
 
 "Settings.title" = "Settings";
+
+"Settings.wearable.deleteAllMeasurements" = "Delete all measurements on Wearable";
+
+"Settings.wearable.resetWearable" = "Reset Wearable";
+
+"Settings.wearable.retryMeasurement" = "Retry Measurement";
+
+"Settings.wearable.wearable" = "Wearable";
+
+"Settings.WearableStatus.notConnected" = "Not connected";
 
 "Unlock.buttonTitle" = "Unlock";
 

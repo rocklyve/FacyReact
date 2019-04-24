@@ -20,7 +20,7 @@ internal enum L10n {
   internal enum ConnectBleDevice {
     /// Please make sure, that your device is turned on
     internal static let description = L10n.tr("Localizable", "ConnectBleDevice.description")
-    /// Connect Pegelmeter
+    /// Connect Wearable
     internal static let headline = L10n.tr("Localizable", "ConnectBleDevice.headline")
     /// Connect manually
     internal static let manualConnection = L10n.tr("Localizable", "ConnectBleDevice.manualConnection")
@@ -42,9 +42,9 @@ internal enum L10n {
     internal static let searchTitle = L10n.tr("Localizable", "ManualConnection.searchTitle")
     /// Stop
     internal static let stopScan = L10n.tr("Localizable", "ManualConnection.stopScan")
-    /// Search for PegelMeter devices...
+    /// Search for Wearable devices...
     internal static let stopTitle = L10n.tr("Localizable", "ManualConnection.stopTitle")
-    /// Connect Pegelmeter
+    /// Connect Wearable
     internal static let title = L10n.tr("Localizable", "ManualConnection.title")
   }
 
@@ -72,10 +72,6 @@ internal enum L10n {
       /// Reference type standard
       internal static let referenceTypeStandard = L10n.tr("Localizable", "Settings.NewMeasurement.referenceTypeStandard")
     }
-    internal enum PegelmeterStatus {
-      /// Not connected
-      internal static let notConnected = L10n.tr("Localizable", "Settings.PegelmeterStatus.notConnected")
-    }
     internal enum SectionTitle {
       /// App
       internal static let app = L10n.tr("Localizable", "Settings.SectionTitle.app")
@@ -83,22 +79,26 @@ internal enum L10n {
       internal static let liveView = L10n.tr("Localizable", "Settings.SectionTitle.liveView")
       /// New measurement
       internal static let newMeasurement = L10n.tr("Localizable", "Settings.SectionTitle.newMeasurement")
-      /// Pegelmeter
-      internal static let pegelmeter = L10n.tr("Localizable", "Settings.SectionTitle.pegelmeter")
+      /// Wearable
+      internal static let wearable = L10n.tr("Localizable", "Settings.SectionTitle.wearable")
+    }
+    internal enum WearableStatus {
+      /// Not connected
+      internal static let notConnected = L10n.tr("Localizable", "Settings.WearableStatus.notConnected")
     }
     internal enum LiveView {
       /// Interval standard
       internal static let intervalStandard = L10n.tr("Localizable", "Settings.liveView.intervalStandard")
     }
-    internal enum Pegelmeter {
-      /// Delete all measurements on Pegelmeter
-      internal static let deleteAllMeasurements = L10n.tr("Localizable", "Settings.pegelmeter.deleteAllMeasurements")
-      /// Pegelmeter
-      internal static let pegelmeter = L10n.tr("Localizable", "Settings.pegelmeter.pegelmeter")
-      /// Reset Pegelmeter
-      internal static let resetPegelmeter = L10n.tr("Localizable", "Settings.pegelmeter.resetPegelmeter")
+    internal enum Wearable {
+      /// Delete all measurements on Wearable
+      internal static let deleteAllMeasurements = L10n.tr("Localizable", "Settings.wearable.deleteAllMeasurements")
+      /// Reset Wearable
+      internal static let resetWearable = L10n.tr("Localizable", "Settings.wearable.resetWearable")
       /// Retry Measurement
-      internal static let retryMeasurement = L10n.tr("Localizable", "Settings.pegelmeter.retryMeasurement")
+      internal static let retryMeasurement = L10n.tr("Localizable", "Settings.wearable.retryMeasurement")
+      /// Wearable
+      internal static let wearable = L10n.tr("Localizable", "Settings.wearable.wearable")
     }
   }
 

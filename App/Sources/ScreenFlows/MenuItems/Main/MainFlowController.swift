@@ -1,6 +1,6 @@
 //
-//  Created by David on 06.04.2019.
-//  Copyright © 2019 DavidLaubenstein. All rights reserved.
+//  Created by Cihat Gündüz on 11.02.19.
+//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
 //
 
 import AnyMenu
@@ -9,28 +9,21 @@ import UIKit
 
 class MainFlowController: InitialFlowController {
     private var navigationCtrl: UINavigationController?
-    var mainViewCtrl: MainViewController?
 
-    override func start(from window: UIWindow) {
-        mainViewCtrl = MainViewController()
-
-        mainViewCtrl?.flowDelegate = self
-        window.rootViewController = mainViewCtrl
-    }
+    private var anyMenuViewCtrl: AnyMenuViewController?
 
     func start(fromInOut window: inout UIWindow?) {
         super.start(from: window!)
 
         let menuViewCtrl = MenuViewController()
+        menuViewCtrl.flowDelegate = self
         let mainViewCtrl = MainViewController()
 
         navigationCtrl = UINavigationController(rootViewController: mainViewCtrl)
         mainViewCtrl.flowDelegate = self
         // TODO: NavigationBar is not loaded correctly
 
-        window?.rootViewController = navigationCtrl
-
-        let anyMenuViewCtrl = AnyMenuViewController(
+        anyMenuViewCtrl = AnyMenuViewController(
             menuViewController: menuViewCtrl,
             contentViewController: navigationCtrl!,
             menuOverlaysContent: false,
@@ -44,15 +37,28 @@ class MainFlowController: InitialFlowController {
                 timingParameters: UICubicTimingParameters(animationCurve: .easeInOut)
             )
         )
-        anyMenuViewCtrl.menuShadowColor = .black
-        anyMenuViewCtrl.menuShadowRadius = 40
-        anyMenuViewCtrl.menuShadowOffset = CGSize(width: 0, height: 2)
-        anyMenuViewCtrl.menuShadowOpacity = 0.5
+        anyMenuViewCtrl?.menuShadowColor = .black
+        anyMenuViewCtrl?.menuShadowRadius = 40
+        anyMenuViewCtrl?.menuShadowOffset = CGSize(width: 0, height: 2)
+        anyMenuViewCtrl?.menuShadowOpacity = 0.5
 
-        anyMenuViewCtrl.present(in: &window)
+        anyMenuViewCtrl?.present(in: &window)
     }
 }
 
 extension MainFlowController: MainFlowDelegate {
-    // TODO: not yet implemented
+    func connectBleDevice() {
+        let connectBleDeviceFlowCtrl = ConnectBleDeviceFlowController()
+        add(subFlowController: connectBleDeviceFlowCtrl)
+        connectBleDeviceFlowCtrl.start(from: navigationCtrl!)
+    }
+}
+
+extension MainFlowController: MenuFlowDelegate {
+    func settings() {
+        guard let anyMenuViewCtrl = anyMenuViewCtrl else { return }
+        let settingsFlowCtrl = SettingsFlowController()
+        add(subFlowController: settingsFlowCtrl)
+        settingsFlowCtrl.start(from: anyMenuViewCtrl)
+    }
 }
