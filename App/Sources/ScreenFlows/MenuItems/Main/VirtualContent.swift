@@ -6,20 +6,6 @@
 import ARKit
 import SceneKit
 
-enum VirtualContentType: Int {
-    case texture
-
-    func makeController() -> VirtualContentController {
-        switch self {
-        case .texture:
-            return TexturedFace()
-
-        default:
-            return TexturedFace()
-        }
-    }
-}
-
 /// For forwarding `ARSCNViewDelegate` messages to the object controlling the currently visible virtual content.
 protocol VirtualContentController: ARSCNViewDelegate {
     /// The root node for the virtual content.

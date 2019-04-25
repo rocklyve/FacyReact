@@ -17,33 +17,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
 
     lazy var sceneView = ARSCNView()
 
-    var contentControllers: [VirtualContentType: VirtualContentController] = [:]
-
-    var selectedVirtualContent: VirtualContentType! {
-        didSet {
-            guard oldValue != nil, oldValue != selectedVirtualContent
-                else { return }
-
-            // Remove existing content when switching types.
-            contentControllers[oldValue]?.contentNode?.removeFromParentNode()
-
-            // If there's an anchor already (switching content), get the content controller to place initial content.
-            // Otherwise, the content controller will place it in `renderer(_:didAdd:for:)`.
-            if let anchor = currentFaceAnchor, let node = sceneView.node(for: anchor),
-                let newContent = selectedContentController.renderer(sceneView, nodeFor: anchor) {
-                node.addChildNode(newContent)
-            }
-        }
-    }
-    var selectedContentController: VirtualContentController {
-        if let controller = contentControllers[selectedVirtualContent] {
-            return controller
-        } else {
-            let controller = selectedVirtualContent.makeController()
-            contentControllers[selectedVirtualContent] = controller
-            return controller
-        }
-    }
+    var contentController: VirtualContentController = TexturedFace()
 
     var currentFaceAnchor: ARFaceAnchor?
 
@@ -63,7 +37,6 @@ class MainViewController: UIViewController, ARSessionDelegate {
         sceneView.delegate = self
         sceneView.session.delegate = self
         sceneView.automaticallyUpdatesLighting = true
-        selectedVirtualContent = .texture
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -78,7 +51,6 @@ class MainViewController: UIViewController, ARSessionDelegate {
     }
 
     // MARK: - ARSessionDelegate
-
     func session(_ session: ARSession, didFailWithError error: Error) {
         guard error is ARError else { return }
 
@@ -131,7 +103,7 @@ extension MainViewController: ARSCNViewDelegate {
 
         // If this is the first time with this anchor, get the controller to create content.
         // Otherwise (switching content), will change content when setting `selectedVirtualContent`.
-        if node.childNodes.isEmpty, let contentNode = selectedContentController.renderer(renderer, nodeFor: faceAnchor) {
+        if node.childNodes.isEmpty, let contentNode = contentController.renderer(renderer, nodeFor: faceAnchor) {
             node.addChildNode(contentNode)
         }
     }
@@ -139,10 +111,10 @@ extension MainViewController: ARSCNViewDelegate {
     /// - Tag: ARFaceGeometryUpdate
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
         guard anchor == currentFaceAnchor,
-            let contentNode = selectedContentController.contentNode,
+            let contentNode = contentController.contentNode,
             contentNode.parent == node
             else { return }
 
-        selectedContentController.renderer(renderer, didUpdate: contentNode, for: anchor)
+        contentController.renderer(renderer, didUpdate: contentNode, for: anchor)
     }
 }
