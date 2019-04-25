@@ -15,6 +15,14 @@ protocol MainFlowDelegate: class {
 class MainViewController: UIViewController, ARSessionDelegate {
     weak var flowDelegate: MainFlowDelegate?
 
+    lazy var startPlayView: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = Colors.Vibrants.softBlue
+        button.layer.cornerRadius = 50
+        button.setTitle("Start", for: .normal)
+        return button
+    }()
+
     lazy var sceneView = ARSCNView()
 
     var contentController: VirtualContentController = TexturedFace()
@@ -25,6 +33,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
         super.viewDidLoad()
         view.backgroundColor = .white
         // view.addSubview(header)
+        sceneView.addSubview(startPlayView)
         view.addSubview(sceneView)
         setupNavigationController(withBarColor: .default)
         setLeftNavBarMenuButton()
@@ -90,6 +99,12 @@ class MainViewController: UIViewController, ARSessionDelegate {
     func setupConstraints() {
         sceneView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+
+        startPlayView.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+            make.width.equalTo(250)
+            make.height.equalTo(100)
         }
     }
 }
