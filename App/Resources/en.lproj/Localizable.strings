@@ -23,6 +23,10 @@
 
 "ManualConnection.title" = "Connect Wearable";
 
+"Menu.contact" = "Contact";
+
+"Menu.Home" = "Home";
+
 "Menu.info" = "Info";
 
 "Menu.liveView" = "Live View";

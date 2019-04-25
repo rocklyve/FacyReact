@@ -49,6 +49,10 @@ internal enum L10n {
   }
 
   internal enum Menu {
+    /// Contact
+    internal static let contact = L10n.tr("Localizable", "Menu.contact")
+    /// Home
+    internal static let home = L10n.tr("Localizable", "Menu.Home")
     /// Info
     internal static let info = L10n.tr("Localizable", "Menu.info")
     /// Live View

@@ -48,9 +48,9 @@ class MainFlowController: InitialFlowController {
 
 extension MainFlowController: MainFlowDelegate {
     func connectBleDevice() {
-        let connectBleDeviceFlowCtrl = ConnectBleDeviceFlowController()
-        add(subFlowController: connectBleDeviceFlowCtrl)
-        connectBleDeviceFlowCtrl.start(from: navigationCtrl!)
+        let manualConnectionFlowCtrl = ManualConnectionFlowController()
+        add(subFlowController: manualConnectionFlowCtrl)
+        manualConnectionFlowCtrl.start(from: navigationCtrl!)
     }
 }
 
