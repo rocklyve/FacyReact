@@ -34,5 +34,23 @@ class TexturedFace: NSObject, VirtualContentController {
             let faceAnchor = anchor as? ARFaceAnchor
             else { return }
         faceGeometry.update(from: faceAnchor.geometry)
+        let blendShapes = faceAnchor.blendShapes
+        guard let eyeBlinkLeft = blendShapes[.eyeBlinkLeft] as? Float,
+            let eyeBlinkRight = blendShapes[.eyeBlinkRight] as? Float,
+            let jawOpen = blendShapes[.jawOpen] as? Float,
+            let browInnerUp = blendShapes[.browInnerUp] as? Float
+            else { return }
+        if eyeBlinkLeft > 0.9 && eyeBlinkRight < 0.9 {
+            print("Rechtes Auge Geschlossen")
+        }
+        if eyeBlinkRight > 0.9 && eyeBlinkLeft < 0.9 {
+            print("Linkes Auge Geschlossen")
+        }
+        if browInnerUp > 0.9 {
+            print("Augenbrauen oben")
+        }
+        if jawOpen > 0.9 {
+            print("Mund geöffnet")
+        }
     }
 }

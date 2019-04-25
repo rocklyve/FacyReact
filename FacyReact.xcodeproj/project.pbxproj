@@ -341,6 +341,16 @@
 			path = Views;
 			sourceTree = "<group>";
 		};
+		38FC7FA62271A9700026D241 /* ARKit */ = {
+			isa = PBXGroup;
+			children = (
+				38FC7F9E2270C9150026D241 /* TexturedFace.swift */,
+				38FC7FA02270CB070026D241 /* VirtualContent.swift */,
+				38FC7FA22270CFAB0026D241 /* Utilities.swift */,
+			);
+			path = ARKit;
+			sourceTree = "<group>";
+		};
 		823F73B01ED84C3A0022317D = {
 			isa = PBXGroup;
 			children = (
@@ -523,9 +533,6 @@
 			children = (
 				8218E4ED2211E9B8007AAAF3 /* MainFlowController.swift */,
 				823F73EF1ED84DAC0022317D /* MainViewController.swift */,
-				38FC7F9E2270C9150026D241 /* TexturedFace.swift */,
-				38FC7FA02270CB070026D241 /* VirtualContent.swift */,
-				38FC7FA22270CFAB0026D241 /* Utilities.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -541,6 +548,7 @@
 		8298175F20DBB6140021ED19 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				38FC7FA62271A9700026D241 /* ARKit */,
 			);
 			path = Models;
 			sourceTree = "<group>";

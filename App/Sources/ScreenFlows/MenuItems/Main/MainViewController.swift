@@ -96,7 +96,6 @@ class MainViewController: UIViewController, ARSessionDelegate {
 }
 
 extension MainViewController: ARSCNViewDelegate {
-
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
         guard let faceAnchor = anchor as? ARFaceAnchor else { return }
         currentFaceAnchor = faceAnchor
