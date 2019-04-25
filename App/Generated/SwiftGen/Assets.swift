@@ -60,6 +60,8 @@ internal enum Asset {
     internal static let logout = UIImage(named: "logout", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let settings = UIImage(named: "settings", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
     internal static let signal = UIImage(named: "signal", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let texture = UIImage(named: "texture", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
+    internal static let wireframeTexture = UIImage(named: "wireframeTexture", in: Bundle(for: BundleToken.self), compatibleWith: nil)!
   }
 }
 

@@ -28,6 +28,9 @@
 		38FC7F982270AB330026D241 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */; };
 		38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */; };
 		38FC7F9D2270AE490026D241 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9C2270AE490026D241 /* Images.swift */; };
+		38FC7F9F2270C9150026D241 /* TexturedFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9E2270C9150026D241 /* TexturedFace.swift */; };
+		38FC7FA12270CB070026D241 /* VirtualContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FA02270CB070026D241 /* VirtualContent.swift */; };
+		38FC7FA32270CFAB0026D241 /* Utilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FA22270CFAB0026D241 /* Utilities.swift */; };
 		52961F10B7B6DC1B8A7030E3F986B204 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
 		64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		820103AA1ED87B0600FB7007 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* AppTests.swift */; };
@@ -139,6 +142,9 @@
 		38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = "../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Extensions/UIViewControllerExtension.swift"; sourceTree = "<group>"; };
 		38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftEntryKitOptions.swift; path = "../../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Elements/Views/SwiftEntryKitOptions.swift"; sourceTree = "<group>"; };
 		38FC7F9C2270AE490026D241 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
+		38FC7F9E2270C9150026D241 /* TexturedFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexturedFace.swift; sourceTree = "<group>"; };
+		38FC7FA02270CB070026D241 /* VirtualContent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContent.swift; sourceTree = "<group>"; };
+		38FC7FA22270CFAB0026D241 /* Utilities.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utilities.swift; sourceTree = "<group>"; };
 		4610B63572B2B54F3895CFC588AB7499 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Hero.framework; path = Dependencies/iOS/Hero.framework; sourceTree = "<group>"; };
 		51AFF9138C319FD33EA21AB13E308186 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		56291D66C1A91860F44D6772B587BA4C /* AnyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AnyMenu.framework; path = Dependencies/iOS/AnyMenu.framework; sourceTree = "<group>"; };
@@ -517,6 +523,9 @@
 			children = (
 				8218E4ED2211E9B8007AAAF3 /* MainFlowController.swift */,
 				823F73EF1ED84DAC0022317D /* MainViewController.swift */,
+				38FC7F9E2270C9150026D241 /* TexturedFace.swift */,
+				38FC7FA02270CB070026D241 /* VirtualContent.swift */,
+				38FC7FA22270CFAB0026D241 /* Utilities.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -875,7 +884,9 @@
 				38FC7F952270AAF40026D241 /* BluetoothConnectorStateObserver.swift in Sources */,
 				38E5667C2264A3050088DD68 /* MenuCell.swift in Sources */,
 				38FC7F9D2270AE490026D241 /* Images.swift in Sources */,
+				38FC7F9F2270C9150026D241 /* TexturedFace.swift in Sources */,
 				38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */,
+				38FC7FA12270CB070026D241 /* VirtualContent.swift in Sources */,
 				38FC7F962270AAF40026D241 /* BluetoothConnector.swift in Sources */,
 				38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */,
 				38FC7F942270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift in Sources */,
@@ -886,6 +897,7 @@
 				38FC7F762270AA2A0026D241 /* SettingsTableViewController.swift in Sources */,
 				38FC7F8C2270AA820026D241 /* ConnectBleDeviceFlowController.swift in Sources */,
 				38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */,
+				38FC7FA32270CFAB0026D241 /* Utilities.swift in Sources */,
 				8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */,
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
 				38FC7F772270AA2A0026D241 /* SettingsFlowController.swift in Sources */,
