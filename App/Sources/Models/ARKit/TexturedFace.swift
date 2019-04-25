@@ -6,8 +6,13 @@
 import ARKit
 import SceneKit
 
+protocol TexturedFaceDelegate {
+    func didChange(_ faceState: FaceState)
+}
+
 class TexturedFace: NSObject, VirtualContentController {
     var contentNode: SCNNode?
+    var faceState: FaceState = []
 
     /// - Tag: CreateARSCNFaceGeometry
     func renderer(_ renderer: SCNSceneRenderer, nodeFor anchor: ARAnchor) -> SCNNode? {
@@ -40,17 +45,25 @@ class TexturedFace: NSObject, VirtualContentController {
             let jawOpen = blendShapes[.jawOpen] as? Float,
             let browInnerUp = blendShapes[.browInnerUp] as? Float
             else { return }
-        if eyeBlinkLeft > 0.9 && eyeBlinkRight < 0.9 {
-            print("Rechtes Auge Geschlossen")
+        if eyeBlinkLeft > 0.9 {
+            faceState.insert(.eyeBlinkLeft)
+        } else {
+            faceState.remove(.eyeBlinkLeft)
         }
-        if eyeBlinkRight > 0.9 && eyeBlinkLeft < 0.9 {
-            print("Linkes Auge Geschlossen")
+        if eyeBlinkRight > 0.9 {
+            faceState.insert(.eyeBlinkRight)
+        } else {
+            faceState.remove(.eyeBlinkRight)
         }
         if browInnerUp > 0.9 {
-            print("Augenbrauen oben")
+            faceState.insert(.browInnerUp)
+        } else {
+            faceState.remove(.browInnerUp)
         }
         if jawOpen > 0.9 {
-            print("Mund geöffnet")
+            faceState.insert(.jawOpen)
+        } else {
+            faceState.remove(.jawOpen)
         }
     }
 }

@@ -14,6 +14,7 @@
 		388144D22271C7970013442D /* SettingsFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144CF2271C7970013442D /* SettingsFlowController.swift */; };
 		388144D32271C7970013442D /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D02271C7970013442D /* SettingsCell.swift */; };
 		388144D42271C7970013442D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D12271C7970013442D /* SettingsTableViewController.swift */; };
+		388144D62271CC8A0013442D /* FaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D52271CC8A0013442D /* FaceState.swift */; };
 		38E5667A2264A2F40088DD68 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E566792264A2F40088DD68 /* MenuViewController.swift */; };
 		38E5667C2264A3050088DD68 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5667B2264A3050088DD68 /* MenuCell.swift */; };
 		38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */; };
@@ -126,6 +127,7 @@
 		388144CF2271C7970013442D /* SettingsFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsFlowController.swift; sourceTree = "<group>"; };
 		388144D02271C7970013442D /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		388144D12271C7970013442D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
+		388144D52271CC8A0013442D /* FaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceState.swift; sourceTree = "<group>"; };
 		38E566792264A2F40088DD68 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		38E5667B2264A3050088DD68 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionFlowController.swift; sourceTree = "<group>"; };
@@ -545,6 +547,7 @@
 			isa = PBXGroup;
 			children = (
 				38FC7FA62271A9700026D241 /* ARKit */,
+				388144D52271CC8A0013442D /* FaceState.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -903,6 +906,7 @@
 				38E5667A2264A2F40088DD68 /* MenuViewController.swift in Sources */,
 				38FC7FAA2271C48B0026D241 /* InfoFlowController.swift in Sources */,
 				38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */,
+				388144D62271CC8A0013442D /* FaceState.swift in Sources */,
 				8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */,
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
