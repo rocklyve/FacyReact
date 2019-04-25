@@ -10,10 +10,21 @@ import UIKit
 
 protocol MainFlowDelegate: class {
     func connectBleDevice()
+    func prepareGameStart()
+    func didPrepareGameStart()
 }
 
 class MainViewController: UIViewController, ARSessionDelegate {
     weak var flowDelegate: MainFlowDelegate?
+
+    lazy var startPlayButton: UIButton = {
+        let button = UIButton()
+        button.backgroundColor = Colors.Vibrants.softBlue
+        button.layer.cornerRadius = 50
+        button.setTitle("Start", for: .normal)
+        button.addTarget(self, action: #selector(startButtonPressed), for: .touchUpInside)
+        return button
+    }()
 
     lazy var sceneView = ARSCNView()
 
@@ -25,6 +36,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
         super.viewDidLoad()
         view.backgroundColor = .white
         // view.addSubview(header)
+        sceneView.addSubview(startPlayButton)
         view.addSubview(sceneView)
         setupNavigationController(withBarColor: .default)
         setLeftNavBarMenuButton()
@@ -48,6 +60,31 @@ class MainViewController: UIViewController, ARSessionDelegate {
 
         // "Reset" to run the AR session for the first time.
         resetTracking()
+    }
+
+    @objc
+    func startButtonPressed() {
+        flowDelegate?.prepareGameStart()
+    }
+
+    func startAnimation() {
+        // Start Animation
+        startPlayButton.snp.updateConstraints { update in
+            update.width.height.equalTo(100)
+        }
+
+        let animation: () -> Void = { [weak self] in
+            guard let self = self else { return }
+            self.startPlayButton.layoutIfNeeded()
+            self.startPlayButton.transform = CGAffineTransform(
+                translationX: -self.view.bounds.width / 2 + 50 + self.view.safeAreaInsets.bottom,
+                y: (self.view.bounds.height / 2) - 50 - self.view.safeAreaInsets.bottom
+            )
+        }
+
+        UIView.animate(withDuration: 0.3, animations: animation) { [weak self] _ in
+            self?.flowDelegate?.didPrepareGameStart()
+        }
     }
 
     // MARK: - ARSessionDelegate
@@ -87,9 +124,17 @@ class MainViewController: UIViewController, ARSessionDelegate {
         present(alertController, animated: true, completion: nil)
     }
 
+    // MARK: - SnapKit Constraints
     func setupConstraints() {
         sceneView.snp.makeConstraints { make in
             make.edges.equalToSuperview()
+        }
+
+        startPlayButton.snp.makeConstraints { make in
+            make.centerX.equalToSuperview()
+            make.centerY.equalToSuperview()
+            make.width.equalTo(250)
+            make.height.equalTo(100)
         }
     }
 }

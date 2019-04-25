@@ -12,15 +12,19 @@ class MainFlowController: InitialFlowController {
 
     private var anyMenuViewCtrl: AnyMenuViewController?
 
+    lazy var mainViewCtrl: MainViewController = {
+        let viewCtrl = MainViewController()
+        viewCtrl.flowDelegate = self
+        return viewCtrl
+    }()
+
     func start(fromInOut window: inout UIWindow?) {
         super.start(from: window!)
 
         let menuViewCtrl = MenuViewController()
         menuViewCtrl.flowDelegate = self
-        let mainViewCtrl = MainViewController()
 
         navigationCtrl = UINavigationController(rootViewController: mainViewCtrl)
-        mainViewCtrl.flowDelegate = self
         // TODO: NavigationBar is not loaded correctly
 
         anyMenuViewCtrl = AnyMenuViewController(
@@ -52,6 +56,17 @@ extension MainFlowController: MainFlowDelegate {
         add(subFlowController: manualConnectionFlowCtrl)
         manualConnectionFlowCtrl.start(from: navigationCtrl!)
     }
+
+    func didPrepareGameStart() {
+        // TODO: Start timer
+        GameTimer.global.flowDelegate = self
+        GameTimer.global.startTimer()
+        //
+    }
+
+    func prepareGameStart() {
+        mainViewCtrl.startAnimation()
+    }
 }
 
 extension MainFlowController: MenuFlowDelegate {
@@ -60,5 +75,17 @@ extension MainFlowController: MenuFlowDelegate {
         let settingsFlowCtrl = SettingsFlowController()
         add(subFlowController: settingsFlowCtrl)
         settingsFlowCtrl.start(from: anyMenuViewCtrl)
+    }
+}
+
+extension MainFlowController: GameTimerDelegate {
+    func timerHasEnded() {
+        // put button back to normal position
+        mainViewCtrl.startPlayButton.setTitle("retry", for: .normal)
+        // text should be displayed as "retry"
+    }
+
+    func timeLeft(timeLeft: Int) {
+        mainViewCtrl.startPlayButton.setTitle("\(timeLeft)", for: .normal)
     }
 }

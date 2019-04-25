@@ -15,6 +15,7 @@
 		388144D32271C7970013442D /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D02271C7970013442D /* SettingsCell.swift */; };
 		388144D42271C7970013442D /* SettingsTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D12271C7970013442D /* SettingsTableViewController.swift */; };
 		388144D62271CC8A0013442D /* FaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D52271CC8A0013442D /* FaceState.swift */; };
+		388144D82271F97F0013442D /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D72271F97F0013442D /* GameTimer.swift */; };
 		38E5667A2264A2F40088DD68 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E566792264A2F40088DD68 /* MenuViewController.swift */; };
 		38E5667C2264A3050088DD68 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5667B2264A3050088DD68 /* MenuCell.swift */; };
 		38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */; };
@@ -128,6 +129,7 @@
 		388144D02271C7970013442D /* SettingsCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
 		388144D12271C7970013442D /* SettingsTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingsTableViewController.swift; sourceTree = "<group>"; };
 		388144D52271CC8A0013442D /* FaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceState.swift; sourceTree = "<group>"; };
+		388144D72271F97F0013442D /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		38E566792264A2F40088DD68 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		38E5667B2264A3050088DD68 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
 		38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionFlowController.swift; sourceTree = "<group>"; };
@@ -577,6 +579,7 @@
 				828A920E22146058005B38B5 /* ErrorHandler.swift */,
 				82CC294E20DBDB2000C61C6E /* Logger.swift */,
 				824A00AB20FCF15900FBF35C /* Extensions */,
+				388144D72271F97F0013442D /* GameTimer.swift */,
 			);
 			path = Globals;
 			sourceTree = "<group>";
@@ -900,6 +903,7 @@
 				38FC7F942270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift in Sources */,
 				38FC7FB02271C4AB0026D241 /* ContactViewController.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
+				388144D82271F97F0013442D /* GameTimer.swift in Sources */,
 				8218E4EE2211E9B8007AAAF3 /* MainFlowController.swift in Sources */,
 				38FC7FAC2271C4960026D241 /* InfoViewController.swift in Sources */,
 				38FC7F8B2270AA820026D241 /* ManualConnectionCell.swift in Sources */,
