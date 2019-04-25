@@ -1,6 +1,6 @@
 //
 //  Created by David Laubenstein on 15.04.19.
-//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
+//  Copyright © 2019 DavidLaubenstein. All rights reserved.
 //
 
 import Imperio
@@ -59,6 +59,7 @@ class MenuCell: UITableViewCell {
         }
     }
 
+    @available(*, unavailable)
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }

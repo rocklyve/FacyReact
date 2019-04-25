@@ -1,6 +1,6 @@
 //
 //  Created by David Laubenstein on 12.04.19.
-//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
+//  Copyright © 2019 DavidLaubenstein. All rights reserved.
 //
 
 import UIKit
@@ -37,20 +37,18 @@ class MenuViewController: UITableViewController {
         sections: [
             ViewModel.Section (
                 items: [
-                    MenuCellModel(title: L10n.Menu.newMeasurement, icon: Images.signal),
-                    MenuCellModel(title: L10n.Menu.overviewMeasurements, icon: Images.history)
+                    MenuCellModel(title: L10n.Menu.home, icon: Images.liveView)
                 ]
             ),
             ViewModel.Section(
                 items: [
-                    MenuCellModel(title: L10n.Menu.liveView, icon: Images.liveView)
+                    MenuCellModel(title: L10n.Menu.settings, icon: Images.settings)
                 ]
             ),
             ViewModel.Section(
                 items: [
-                    MenuCellModel(title: L10n.Menu.settings, icon: Images.settings),
-                    MenuCellModel(title: L10n.Menu.info, icon: Images.info),
-                    MenuCellModel(title: L10n.Menu.logout, icon: Images.logout)
+                    MenuCellModel(title: L10n.Menu.contact, icon: Images.signal),
+                    MenuCellModel(title: L10n.Menu.info, icon: Images.info)
                 ]
             )
         ]
@@ -155,19 +153,14 @@ class MenuViewController: UITableViewController {
                 anyMenuViewController?.contentViewController = MainViewController()
                 anyMenuViewController?.closeMenu()
 
-            case 1:
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
-
             default:
                 log.error("defaultCase in TableView")
             }
 
         case 1:
             switch indexPath.row {
-            case 0:
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
+            case 0:// settings
+                flowDelegate?.settings()
 
             default:
                 log.error("defaultCase in TableView")
@@ -175,20 +168,16 @@ class MenuViewController: UITableViewController {
 
         case 2:
             switch indexPath.row {
-            case 0: // settings
-                flowDelegate?.settings()
+            case 0:
+                anyMenuViewController?.contentViewController = MainViewController()
+                anyMenuViewController?.closeMenu()
 
             case 1: // info
                 anyMenuViewController?.contentViewController = MainViewController()
                 anyMenuViewController?.closeMenu()
 
-            case 2: // logout
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
-
             default:
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
+                log.error("defaultCase in TableView")
             }
 
         default:
