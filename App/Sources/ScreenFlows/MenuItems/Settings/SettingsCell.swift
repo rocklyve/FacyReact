@@ -1,6 +1,6 @@
 //
 //  Created by David Laubenstein on 15.04.19.
-//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
+//  Copyright © 2019 DavidLaubenstein. All rights reserved.
 //
 
 import HandySwift
@@ -64,7 +64,7 @@ class SettingsCell: UITableViewCell {
             cellLabel.isHidden = cellModel?.title?.isBlank ?? true
             cellLabel.text = cellModel?.title
             cellDescription.text = cellModel?.subtitle
-            if cellDescription.text == "" || cellDescription.text == nil {
+            if cellDescription.text?.isEmpty ?? false || cellDescription.text == nil {
                 cellDescription.isHidden = true
             } else {
                 cellDescription.isHidden = false

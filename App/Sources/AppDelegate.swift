@@ -22,10 +22,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         Branding.shared.setup(window: window!)
 
         // start initial flow
-        let mainFlowController = MainFlowController()
-        mainFlowController.start(fromInOut: &window)
+        let mainFlowCtrl = MainFlowController()
+        mainFlowCtrl.start(fromInOut: &window)
 
-        initialFlowCtrl = mainFlowController
+        initialFlowCtrl = mainFlowCtrl
 
         return true
     }

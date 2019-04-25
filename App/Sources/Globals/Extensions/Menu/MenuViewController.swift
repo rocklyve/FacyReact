@@ -1,6 +1,6 @@
 //
 //  Created by David Laubenstein on 12.04.19.
-//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
+//  Copyright © 2019 DavidLaubenstein. All rights reserved.
 //
 
 import UIKit
@@ -37,7 +37,7 @@ class MenuViewController: UITableViewController {
         sections: [
             ViewModel.Section (
                 items: [
-                    MenuCellModel(title: L10n.Menu.home, icon: Images.liveView),
+                    MenuCellModel(title: L10n.Menu.home, icon: Images.liveView)
                 ]
             ),
             ViewModel.Section(

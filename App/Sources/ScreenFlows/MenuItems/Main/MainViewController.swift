@@ -76,7 +76,6 @@ class MainViewController: UIViewController, ARSessionDelegate {
     }
 
     // MARK: - Error handling
-
     func displayErrorMessage(title: String, message: String) {
         // Present an alert informing about the error that has occurred.
         let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
