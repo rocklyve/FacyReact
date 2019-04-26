@@ -23,7 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
         // start initial flow
         let mainFlowCtrl = MainFlowController()
-        mainFlowCtrl.start(fromInOut: &window)
+        mainFlowCtrl.start(from: window!)
 
         initialFlowCtrl = mainFlowCtrl
 

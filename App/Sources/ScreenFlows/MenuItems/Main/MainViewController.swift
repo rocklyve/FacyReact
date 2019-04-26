@@ -8,10 +8,11 @@ import SceneKit
 import SnapKit
 import UIKit
 
-protocol MainFlowDelegate: class {
+protocol MainFlowDelegate: AnyObject {
     func connectBleDevice()
     func prepareGameStart()
     func didPrepareGameStart()
+    func settings()
 }
 
 class MainViewController: UIViewController, ARSessionDelegate {
@@ -79,7 +80,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
         gameActionLabel.isHidden = true
         view.addSubview(sceneView)
         setupNavigationController(withBarColor: .default)
-        setLeftNavBarMenuButton()
+        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.settings, style: .plain, target: self, action: #selector(settingsPressed))
         setupConstraints()
 
         guard ARFaceTrackingConfiguration.isSupported else { return }
@@ -104,83 +105,13 @@ class MainViewController: UIViewController, ARSessionDelegate {
     }
 
     @objc
+    func settingsPressed() {
+        flowDelegate?.settings()
+    }
+
+    @objc
     func startButtonPressed() {
         flowDelegate?.prepareGameStart()
-    }
-
-    func startAnimation() {
-        // Start Animation
-        startPlayButton.snp.updateConstraints { update in
-            update.width.height.equalTo(100)
-        }
-
-        let animation: () -> Void = { [weak self] in
-            guard let self = self else { return }
-            self.startPlayButton.layoutIfNeeded()
-            self.startPlayButton.transform = CGAffineTransform(
-                translationX: -self.view.bounds.width / 2 + 50 + self.view.safeAreaInsets.bottom,
-                y: (self.view.bounds.height / 2) - 50 - self.view.safeAreaInsets.bottom
-            )
-        }
-
-        UIView.animate(withDuration: 0.3, animations: animation) { [weak self] _ in
-            self?.flowDelegate?.didPrepareGameStart()
-        }
-    }
-
-    func resetAnimation() {
-        let animation: () -> Void = { [weak self] in
-            guard let self = self else { return }
-            // TODO: snapkit reset buttonlayout
-            self.startPlayButton.snp.updateConstraints({ update in
-                update.centerX.equalToSuperview()
-                update.centerY.equalToSuperview()
-                update.width.equalTo(250)
-                update.height.equalTo(100)
-            })
-            self.startPlayButton.transform = .identity
-        }
-        UIView.animate(withDuration: 0.3, animations: animation) { [weak self] _ in
-            guard let self = self else { return }
-            self.startPlayButton.setTitle("Retry", for: .normal)
-        }
-    }
-
-    // MARK: - ARSessionDelegate
-    func session(_ session: ARSession, didFailWithError error: Error) {
-        guard error is ARError else { return }
-
-        let errorWithInfo = error as NSError
-        let messages = [
-            errorWithInfo.localizedDescription,
-            errorWithInfo.localizedFailureReason,
-            errorWithInfo.localizedRecoverySuggestion
-        ]
-        let errorMessage = messages.compactMap({ $0 }).joined(separator: "\n")
-
-        DispatchQueue.main.async {
-            self.displayErrorMessage(title: "The AR session failed.", message: errorMessage)
-        }
-    }
-
-    /// - Tag: ARFaceTrackingSetup
-    func resetTracking() {
-        guard ARFaceTrackingConfiguration.isSupported else { return }
-        let configuration = ARFaceTrackingConfiguration()
-        configuration.isLightEstimationEnabled = true
-        sceneView.session.run(configuration, options: [.resetTracking, .removeExistingAnchors])
-    }
-
-    // MARK: - Error handling
-    func displayErrorMessage(title: String, message: String) {
-        // Present an alert informing about the error that has occurred.
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
-        let restartAction = UIAlertAction(title: "Restart Session", style: .default) { _ in
-            alertController.dismiss(animated: true, completion: nil)
-            self.resetTracking()
-        }
-        alertController.addAction(restartAction)
-        present(alertController, animated: true, completion: nil)
     }
 
     // MARK: - SnapKit Constraints
@@ -210,46 +141,8 @@ class MainViewController: UIViewController, ARSessionDelegate {
         gameActionLabel.snp.makeConstraints { make in
             make.height.equalTo(100)
             make.width.equalTo(250)
-            make.top.equalToSuperview().offset(62)
+            make.top.equalToSuperview().offset(122)
             make.right.equalToSuperview().inset(32)
-        }
-    }
-}
-
-extension MainViewController: ARSCNViewDelegate {
-    func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let faceAnchor = anchor as? ARFaceAnchor else { return }
-        currentFaceAnchor = faceAnchor
-
-        // If this is the first time with this anchor, get the controller to create content.
-        // Otherwise (switching content), will change content when setting `selectedVirtualContent`.
-        if node.childNodes.isEmpty, let contentNode = contentController.renderer(renderer, nodeFor: faceAnchor) {
-            node.addChildNode(contentNode)
-        }
-    }
-
-    /// - Tag: ARFaceGeometryUpdate
-    func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard anchor == currentFaceAnchor,
-            let contentNode = contentController.contentNode,
-            contentNode.parent == node
-            else { return }
-
-        contentController.renderer(renderer, didUpdate: contentNode, for: anchor)
-    }
-}
-
-extension MainViewController: TexturedFaceDelegate {
-    func didChange(_ faceState: FaceState) {
-        // if faceState == active state, then push counter + 1
-        if(Game.shared.currentState == faceState) {
-            DispatchQueue.main.async {
-                var counter: Int = Int(self.gameCounterLabel.text!)!
-                counter += 1
-                self.gameCounterLabel.text = "\(counter)"
-                Game.shared.newRandomCurrentState()
-                self.gameActionLabel.text = Game.shared.getCurrentStateAsString()
-            }
         }
     }
 }

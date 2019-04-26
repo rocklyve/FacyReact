@@ -17,8 +17,8 @@
 		388144D62271CC8A0013442D /* FaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D52271CC8A0013442D /* FaceState.swift */; };
 		388144D82271F97F0013442D /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D72271F97F0013442D /* GameTimer.swift */; };
 		3882DFDA227301A900594D69 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFD9227301A900594D69 /* Game.swift */; };
-		38E5667A2264A2F40088DD68 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E566792264A2F40088DD68 /* MenuViewController.swift */; };
-		38E5667C2264A3050088DD68 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38E5667B2264A3050088DD68 /* MenuCell.swift */; };
+		3882DFDC227371E300594D69 /* MainViewControllerAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */; };
+		3882DFDE2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */; };
 		38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */; };
 		38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */; };
 		38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */; };
@@ -31,10 +31,6 @@
 		38FC7F9D2270AE490026D241 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9C2270AE490026D241 /* Images.swift */; };
 		38FC7F9F2270C9150026D241 /* TexturedFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9E2270C9150026D241 /* TexturedFace.swift */; };
 		38FC7FA12270CB070026D241 /* VirtualContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FA02270CB070026D241 /* VirtualContentController.swift */; };
-		38FC7FAA2271C48B0026D241 /* InfoFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FA92271C48B0026D241 /* InfoFlowController.swift */; };
-		38FC7FAC2271C4960026D241 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FAB2271C4960026D241 /* InfoViewController.swift */; };
-		38FC7FAE2271C4A10026D241 /* ContactFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FAD2271C4A10026D241 /* ContactFlowController.swift */; };
-		38FC7FB02271C4AB0026D241 /* ContactViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FAF2271C4AB0026D241 /* ContactViewController.swift */; };
 		52961F10B7B6DC1B8A7030E3F986B204 /* SnapshotTesting.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; };
 		64233CC39E6FC8F71E01850214182695 /* SnapshotTesting.framework in Accio */ = {isa = PBXBuildFile; fileRef = 9E83847E350B20438D8E61F8BF8C1C41 /* SnapshotTesting.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		820103AA1ED87B0600FB7007 /* AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 820103A81ED87AE000FB7007 /* AppTests.swift */; };
@@ -132,8 +128,8 @@
 		388144D52271CC8A0013442D /* FaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceState.swift; sourceTree = "<group>"; };
 		388144D72271F97F0013442D /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		3882DFD9227301A900594D69 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		38E566792264A2F40088DD68 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
-		38E5667B2264A3050088DD68 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerAnimationExtension.swift; sourceTree = "<group>"; };
+		3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerARFaceKitExtension.swift; sourceTree = "<group>"; };
 		38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionFlowController.swift; sourceTree = "<group>"; };
 		38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionTableViewController.swift; sourceTree = "<group>"; };
 		38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionScanCell.swift; sourceTree = "<group>"; };
@@ -146,10 +142,6 @@
 		38FC7F9C2270AE490026D241 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		38FC7F9E2270C9150026D241 /* TexturedFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexturedFace.swift; sourceTree = "<group>"; };
 		38FC7FA02270CB070026D241 /* VirtualContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContentController.swift; sourceTree = "<group>"; };
-		38FC7FA92271C48B0026D241 /* InfoFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoFlowController.swift; sourceTree = "<group>"; };
-		38FC7FAB2271C4960026D241 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
-		38FC7FAD2271C4A10026D241 /* ContactFlowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactFlowController.swift; sourceTree = "<group>"; };
-		38FC7FAF2271C4AB0026D241 /* ContactViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContactViewController.swift; sourceTree = "<group>"; };
 		4610B63572B2B54F3895CFC588AB7499 /* Hero.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = Hero.framework; path = Dependencies/iOS/Hero.framework; sourceTree = "<group>"; };
 		51AFF9138C319FD33EA21AB13E308186 /* SnapKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = SnapKit.framework; path = Dependencies/iOS/SnapKit.framework; sourceTree = "<group>"; };
 		56291D66C1A91860F44D6772B587BA4C /* AnyMenu.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; name = AnyMenu.framework; path = Dependencies/iOS/AnyMenu.framework; sourceTree = "<group>"; };
@@ -259,20 +251,9 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
-		38E566782264A2E70088DD68 /* Menu */ = {
-			isa = PBXGroup;
-			children = (
-				38E566792264A2F40088DD68 /* MenuViewController.swift */,
-				38E5667B2264A3050088DD68 /* MenuCell.swift */,
-			);
-			path = Menu;
-			sourceTree = "<group>";
-		};
 		38FC7F792270AA330026D241 /* MenuItems */ = {
 			isa = PBXGroup;
 			children = (
-				38FC7FA72271B2ED0026D241 /* Contact */,
-				38FC7FA82271B2F80026D241 /* Info */,
 				8298175C20DBB5D90021ED19 /* Main */,
 				38FC7F7C2270AA4E0026D241 /* Settings */,
 			);
@@ -343,24 +324,6 @@
 				38FC7FA02270CB070026D241 /* VirtualContentController.swift */,
 			);
 			path = ARKit;
-			sourceTree = "<group>";
-		};
-		38FC7FA72271B2ED0026D241 /* Contact */ = {
-			isa = PBXGroup;
-			children = (
-				38FC7FAD2271C4A10026D241 /* ContactFlowController.swift */,
-				38FC7FAF2271C4AB0026D241 /* ContactViewController.swift */,
-			);
-			path = Contact;
-			sourceTree = "<group>";
-		};
-		38FC7FA82271B2F80026D241 /* Info */ = {
-			isa = PBXGroup;
-			children = (
-				38FC7FA92271C48B0026D241 /* InfoFlowController.swift */,
-				38FC7FAB2271C4960026D241 /* InfoViewController.swift */,
-			);
-			path = Info;
 			sourceTree = "<group>";
 		};
 		823F73B01ED84C3A0022317D = {
@@ -505,7 +468,6 @@
 			isa = PBXGroup;
 			children = (
 				38FC7F992270AB780026D241 /* Views */,
-				38E566782264A2E70088DD68 /* Menu */,
 				38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */,
 			);
 			path = Extensions;
@@ -544,6 +506,8 @@
 			children = (
 				8218E4ED2211E9B8007AAAF3 /* MainFlowController.swift */,
 				823F73EF1ED84DAC0022317D /* MainViewController.swift */,
+				3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */,
+				3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -903,30 +867,26 @@
 				823F743C1ED8679D0022317D /* Storyboards.swift in Sources */,
 				823F74061ED84DAC0022317D /* MainViewController.swift in Sources */,
 				38FC7F952270AAF40026D241 /* BluetoothConnectorStateObserver.swift in Sources */,
-				38E5667C2264A3050088DD68 /* MenuCell.swift in Sources */,
 				38FC7F9D2270AE490026D241 /* Images.swift in Sources */,
 				38FC7F9F2270C9150026D241 /* TexturedFace.swift in Sources */,
-				38FC7FAE2271C4A10026D241 /* ContactFlowController.swift in Sources */,
 				38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */,
 				38FC7FA12270CB070026D241 /* VirtualContentController.swift in Sources */,
 				38FC7F962270AAF40026D241 /* BluetoothConnector.swift in Sources */,
 				38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */,
 				38FC7F942270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift in Sources */,
-				38FC7FB02271C4AB0026D241 /* ContactViewController.swift in Sources */,
 				3882DFDA227301A900594D69 /* Game.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
 				388144D82271F97F0013442D /* GameTimer.swift in Sources */,
 				8218E4EE2211E9B8007AAAF3 /* MainFlowController.swift in Sources */,
-				38FC7FAC2271C4960026D241 /* InfoViewController.swift in Sources */,
 				38FC7F8B2270AA820026D241 /* ManualConnectionCell.swift in Sources */,
-				38E5667A2264A2F40088DD68 /* MenuViewController.swift in Sources */,
-				38FC7FAA2271C48B0026D241 /* InfoFlowController.swift in Sources */,
 				38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */,
 				388144D62271CC8A0013442D /* FaceState.swift in Sources */,
 				8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */,
+				3882DFDE2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift in Sources */,
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
 				388144D32271C7970013442D /* SettingsCell.swift in Sources */,
+				3882DFDC227371E300594D69 /* MainViewControllerAnimationExtension.swift in Sources */,
 				388144D22271C7970013442D /* SettingsFlowController.swift in Sources */,
 				828A920F22146058005B38B5 /* ErrorHandler.swift in Sources */,
 				38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */,
