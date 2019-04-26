@@ -87,6 +87,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
             target: self,
             action: #selector(settingsPressed)
         )
+        navigationItem.rightBarButtonItem?.tintColor = .white
 
         navigationItem.leftBarButtonItem = UIBarButtonItem(
             image: Images.signal,
@@ -94,6 +95,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
             target: self,
             action: #selector(bleConnectionPressed)
         )
+        navigationItem.leftBarButtonItem?.tintColor = .white
 
         setupConstraints()
 
