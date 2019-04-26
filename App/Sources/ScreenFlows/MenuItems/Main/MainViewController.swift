@@ -22,8 +22,45 @@ class MainViewController: UIViewController, ARSessionDelegate {
         button.backgroundColor = Colors.Vibrants.softBlue
         button.layer.cornerRadius = 50
         button.setTitle("Start", for: .normal)
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowOffset = CGSize(width: 5, height: 5)
+        button.layer.shadowRadius = 5
+        button.layer.shadowOpacity = 0.7
+        button.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .regular)
         button.addTarget(self, action: #selector(startButtonPressed), for: .touchUpInside)
         return button
+    }()
+
+    lazy var gameCounterView: UIView = {
+        let view = UIView()
+        view.addSubview(gameCounterLabel)
+        view.backgroundColor = Colors.Vibrants.softBlue
+        view.layer.cornerRadius = 50
+        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowOffset = CGSize(width: 5, height: 5)
+        view.layer.shadowRadius = 5
+        view.layer.shadowOpacity = 0.7
+        return view
+    }()
+
+    lazy var gameActionLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 32, weight: .regular)
+        label.backgroundColor = Colors.Vibrants.softBlue
+        label.clipsToBounds = true
+        label.layer.cornerRadius = 50
+        label.textColor = .white
+        return label
+    }()
+
+    lazy var gameCounterLabel: UILabel = {
+        let label = UILabel()
+        label.textAlignment = .center
+        label.font = UIFont.systemFont(ofSize: 32, weight: .regular)
+        label.textColor = .white
+        label.text = "0"
+        return label
     }()
 
     lazy var sceneView = ARSCNView()
@@ -37,6 +74,9 @@ class MainViewController: UIViewController, ARSessionDelegate {
         view.backgroundColor = .white
         // view.addSubview(header)
         sceneView.addSubview(startPlayButton)
+        sceneView.addSubview(gameCounterView)
+        sceneView.addSubview(gameActionLabel)
+        gameActionLabel.isHidden = true
         view.addSubview(sceneView)
         setupNavigationController(withBarColor: .default)
         setLeftNavBarMenuButton()
@@ -49,6 +89,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
         sceneView.delegate = self
         sceneView.session.delegate = self
         sceneView.automaticallyUpdatesLighting = true
+        contentController.flowDelegate = self
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -136,6 +177,24 @@ class MainViewController: UIViewController, ARSessionDelegate {
             make.width.equalTo(250)
             make.height.equalTo(100)
         }
+
+        gameCounterView.snp.makeConstraints { make in
+            make.bottom.equalToSuperview().inset(32)
+            make.right.equalToSuperview().inset(32)
+            make.height.width.equalTo(100)
+        }
+
+        gameCounterLabel.snp.makeConstraints { make in
+            make.centerX.centerY.equalToSuperview()
+            make.width.height.equalToSuperview().inset(10)
+        }
+
+        gameActionLabel.snp.makeConstraints { make in
+            make.height.equalTo(100)
+            make.width.equalTo(250)
+            make.top.equalToSuperview().offset(62)
+            make.right.equalToSuperview().inset(32)
+        }
     }
 }
 
@@ -159,5 +218,20 @@ extension MainViewController: ARSCNViewDelegate {
             else { return }
 
         contentController.renderer(renderer, didUpdate: contentNode, for: anchor)
+    }
+}
+
+extension MainViewController: TexturedFaceDelegate {
+    func didChange(_ faceState: FaceState) {
+        // if faceState == active state, then push counter + 1
+        if(Game.shared.currentState == faceState) {
+            DispatchQueue.main.async {
+                var counter: Int = Int(self.gameCounterLabel.text!)!
+                counter += 1
+                self.gameCounterLabel.text = "\(counter)"
+                Game.shared.newRandomCurrentState()
+                self.gameActionLabel.text = Game.shared.getCurrentStateAsString()
+            }
+        }
     }
 }

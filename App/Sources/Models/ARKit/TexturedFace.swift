@@ -6,11 +6,13 @@
 import ARKit
 import SceneKit
 
-protocol TexturedFaceDelegate {
+protocol TexturedFaceDelegate: AnyObject {
     func didChange(_ faceState: FaceState)
 }
 
 class TexturedFace: NSObject, VirtualContentController {
+    var flowDelegate: TexturedFaceDelegate?
+
     var contentNode: SCNNode?
     var faceState: FaceState = []
 
@@ -47,21 +49,25 @@ class TexturedFace: NSObject, VirtualContentController {
             else { return }
         if eyeBlinkLeft > 0.9 {
             faceState.insert(.eyeBlinkLeft)
+            flowDelegate?.didChange(faceState)
         } else {
             faceState.remove(.eyeBlinkLeft)
         }
-        if eyeBlinkRight > 0.9 {
+        if eyeBlinkRight > 0.8 {
             faceState.insert(.eyeBlinkRight)
+            flowDelegate?.didChange(faceState)
         } else {
             faceState.remove(.eyeBlinkRight)
         }
         if browInnerUp > 0.9 {
             faceState.insert(.browInnerUp)
+            flowDelegate?.didChange(faceState)
         } else {
             faceState.remove(.browInnerUp)
         }
-        if jawOpen > 0.9 {
+        if jawOpen > 0.8 {
             faceState.insert(.jawOpen)
+            flowDelegate?.didChange(faceState)
         } else {
             faceState.remove(.jawOpen)
         }

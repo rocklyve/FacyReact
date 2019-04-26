@@ -4,3 +4,11 @@
 //
 
 import Foundation
+import Imperio
+import UIKit
+
+class ContactFlowController: FlowController {
+    override func start(from presentingViewController: UIViewController) {
+        super.start(from: presentingViewController)
+    }
+}
