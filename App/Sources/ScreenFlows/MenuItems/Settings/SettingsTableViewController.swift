@@ -74,8 +74,10 @@ class SettingsTableViewController: UITableViewController {
         tableView.register(SettingsCell.self, forCellReuseIdentifier: cellReuseIdentifier)
         tableView.separatorStyle = .none
 
-        setLeftNavBarMenuButton()
         self.title = L10n.Settings.title
+
+        navigationController?.navigationBar.tintColor = .black
+        navigationItem.leftBarButtonItem = UIBarButtonItem(image: Images.circleCross, style: .plain, target: self, action: #selector(closeSettings))
         NotificationCenter.default.addObserver(
             self,
             selector: #selector(updateTableViewForNewState(_:)),
@@ -89,6 +91,11 @@ class SettingsTableViewController: UITableViewController {
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         viewModel.sections[1].items[0].subtitle = SettingsTableViewController.wearableConnection()
+    }
+
+    @objc
+    func closeSettings() {
+        self.dismiss(animated: true, completion: nil)
     }
 
     // MARK: - UITableViewDataSource Protocol Implementation

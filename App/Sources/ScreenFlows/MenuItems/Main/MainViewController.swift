@@ -8,10 +8,11 @@ import SceneKit
 import SnapKit
 import UIKit
 
-protocol MainFlowDelegate: class {
+protocol MainFlowDelegate: AnyObject {
     func connectBleDevice()
     func prepareGameStart()
     func didPrepareGameStart()
+    func settings()
 }
 
 class MainViewController: UIViewController, ARSessionDelegate {
@@ -79,7 +80,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
         gameActionLabel.isHidden = true
         view.addSubview(sceneView)
         setupNavigationController(withBarColor: .default)
-        setLeftNavBarMenuButton()
+        navigationItem.rightBarButtonItem = UIBarButtonItem.init(image: Images.settings, style: .plain, target: self, action: #selector(settingsPressed))
         setupConstraints()
 
         guard ARFaceTrackingConfiguration.isSupported else { return }
@@ -101,6 +102,11 @@ class MainViewController: UIViewController, ARSessionDelegate {
 
         // "Reset" to run the AR session for the first time.
         resetTracking()
+    }
+
+    @objc
+    func settingsPressed() {
+        flowDelegate?.settings()
     }
 
     @objc
@@ -210,7 +216,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
         gameActionLabel.snp.makeConstraints { make in
             make.height.equalTo(100)
             make.width.equalTo(250)
-            make.top.equalToSuperview().offset(62)
+            make.top.equalToSuperview().offset(122)
             make.right.equalToSuperview().inset(32)
         }
     }

@@ -16,10 +16,9 @@ class SettingsFlowController: FlowController {
         return settingsTableViewCtrl
     }()
 
-    func start(from anyMenuViewController: AnyMenuViewController) {
-        super.start(from: anyMenuViewController)
-        anyMenuViewController.contentViewController = navigationCtrl
-        anyMenuViewController.closeMenu()
+    override func start(from presentingViewController: UIViewController) {
+        super.start(from: presentingViewController)
+        presentingViewController.present(navigationCtrl, animated: true, completion: nil)
     }
 }
 

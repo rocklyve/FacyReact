@@ -6,7 +6,10 @@
 import Foundation
 
 class Game {
+    // MARK: - Static Properties
+    /// Globally shared Singleton
     static var shared = Game()
+
     // MARK: - Initialization
     /// Initializers a BLEConnecter
     /// It is set to private as it uses the Singleton Pattern
@@ -15,7 +18,6 @@ class Game {
     var currentState: FaceState?
 
     func newRandomCurrentState() {
-        let number = Int.random(in: 0 ..< 3)
         currentState = FaceState.allStates.randomElement()
     }
 
