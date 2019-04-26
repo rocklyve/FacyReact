@@ -79,8 +79,22 @@ class MainViewController: UIViewController, ARSessionDelegate {
         sceneView.addSubview(gameActionLabel)
         gameActionLabel.isHidden = true
         view.addSubview(sceneView)
+
         setupNavigationController(withBarColor: .default)
-        navigationItem.rightBarButtonItem = UIBarButtonItem(image: Images.settings, style: .plain, target: self, action: #selector(settingsPressed))
+        navigationItem.rightBarButtonItem = UIBarButtonItem(
+            image: Images.settings,
+            style: .plain,
+            target: self,
+            action: #selector(settingsPressed)
+        )
+
+        navigationItem.leftBarButtonItem = UIBarButtonItem(
+            image: Images.signal,
+            style: .plain,
+            target: self,
+            action: #selector(bleConnectionPressed)
+        )
+
         setupConstraints()
 
         guard ARFaceTrackingConfiguration.isSupported else { return }
@@ -107,6 +121,15 @@ class MainViewController: UIViewController, ARSessionDelegate {
     @objc
     func settingsPressed() {
         flowDelegate?.settings()
+    }
+
+    @objc
+    func bleConnectionPressed() {
+        if BluetoothConnector.global.isConnected {
+            // TODO: open popup which shows information about the connected Wearable
+        } else {
+            flowDelegate?.connectBleDevice()
+        }
     }
 
     @objc
