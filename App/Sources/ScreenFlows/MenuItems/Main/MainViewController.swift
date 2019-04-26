@@ -128,6 +128,24 @@ class MainViewController: UIViewController, ARSessionDelegate {
         }
     }
 
+    func resetAnimation() {
+        let animation: () -> Void = { [weak self] in
+            guard let self = self else { return }
+            // TODO: snapkit reset buttonlayout
+            self.startPlayButton.snp.updateConstraints({ update in
+                update.centerX.equalToSuperview()
+                update.centerY.equalToSuperview()
+                update.width.equalTo(250)
+                update.height.equalTo(100)
+            })
+            self.startPlayButton.transform = .identity
+        }
+        UIView.animate(withDuration: 0.3, animations: animation) { [weak self] _ in
+            guard let self = self else { return }
+            self.startPlayButton.setTitle("Retry", for: .normal)
+        }
+    }
+
     // MARK: - ARSessionDelegate
     func session(_ session: ARSession, didFailWithError error: Error) {
         guard error is ARError else { return }
