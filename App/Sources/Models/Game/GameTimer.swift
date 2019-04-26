@@ -22,10 +22,16 @@ class GameTimer {
     var isRunning: Bool?
 
     var timer: Timer?
+    var gameTime: Int = 30
     var timeLeft: Int = 30
 
     func startTimer() {
+        timeLeft = gameTime
         timer = Timer.scheduledTimer(timeInterval: 1.0, target: self, selector: #selector(reduceCounter), userInfo: nil, repeats: true)
+    }
+
+    func resetTimer() {
+        timeLeft = gameTime
     }
 
     @objc
