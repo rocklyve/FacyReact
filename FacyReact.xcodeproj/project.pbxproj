@@ -17,6 +17,8 @@
 		388144D62271CC8A0013442D /* FaceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D52271CC8A0013442D /* FaceState.swift */; };
 		388144D82271F97F0013442D /* GameTimer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 388144D72271F97F0013442D /* GameTimer.swift */; };
 		3882DFDA227301A900594D69 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFD9227301A900594D69 /* Game.swift */; };
+		3882DFDC227371E300594D69 /* MainViewControllerAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */; };
+		3882DFDE2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */; };
 		38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */; };
 		38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */; };
 		38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */; };
@@ -126,6 +128,8 @@
 		388144D52271CC8A0013442D /* FaceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FaceState.swift; sourceTree = "<group>"; };
 		388144D72271F97F0013442D /* GameTimer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameTimer.swift; sourceTree = "<group>"; };
 		3882DFD9227301A900594D69 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
+		3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerAnimationExtension.swift; sourceTree = "<group>"; };
+		3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerARFaceKitExtension.swift; sourceTree = "<group>"; };
 		38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionFlowController.swift; sourceTree = "<group>"; };
 		38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionTableViewController.swift; sourceTree = "<group>"; };
 		38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionScanCell.swift; sourceTree = "<group>"; };
@@ -502,6 +506,8 @@
 			children = (
 				8218E4ED2211E9B8007AAAF3 /* MainFlowController.swift */,
 				823F73EF1ED84DAC0022317D /* MainViewController.swift */,
+				3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */,
+				3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -876,9 +882,11 @@
 				38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */,
 				388144D62271CC8A0013442D /* FaceState.swift in Sources */,
 				8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */,
+				3882DFDE2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift in Sources */,
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
 				388144D32271C7970013442D /* SettingsCell.swift in Sources */,
+				3882DFDC227371E300594D69 /* MainViewControllerAnimationExtension.swift in Sources */,
 				388144D22271C7970013442D /* SettingsFlowController.swift in Sources */,
 				828A920F22146058005B38B5 /* ErrorHandler.swift in Sources */,
 				38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */,
