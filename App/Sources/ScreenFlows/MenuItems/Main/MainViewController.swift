@@ -107,6 +107,13 @@ class MainViewController: UIViewController, ARSessionDelegate {
         sceneView.session.delegate = self
         sceneView.automaticallyUpdatesLighting = true
         contentController.flowDelegate = self
+
+        NotificationCenter.default.addObserver(
+            self, selector:
+            #selector(connectionStateChanged),
+            name: BluetoothConnectorNotificationPostMaster.didUpdateConnectionNotification,
+            object: nil
+        )
     }
 
     override func viewDidAppear(_ animated: Bool) {
@@ -118,6 +125,31 @@ class MainViewController: UIViewController, ARSessionDelegate {
 
         // "Reset" to run the AR session for the first time.
         resetTracking()
+    }
+
+    @objc
+    func connectionStateChanged() {
+        if BluetoothConnector.global.isConnected {
+            DispatchQueue.main.async {
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+                    image: Images.signal,
+                    style: .plain,
+                    target: self,
+                    action: #selector(self.bleConnectionPressed)
+                )
+                self.navigationItem.leftBarButtonItem?.tintColor = .green
+            }
+        } else {
+            DispatchQueue.main.async {
+                self.navigationItem.leftBarButtonItem = UIBarButtonItem(
+                    image: Images.signal,
+                    style: .plain,
+                    target: self,
+                    action: #selector(self.bleConnectionPressed)
+                )
+                self.navigationItem.leftBarButtonItem?.tintColor = .white
+            }
+        }
     }
 
     @objc
