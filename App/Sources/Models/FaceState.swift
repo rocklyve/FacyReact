@@ -14,4 +14,5 @@ struct FaceState: OptionSet {
     static let browInnerUp = FaceState(rawValue: 1 << 3)
 
     static let closedEyes: FaceState = [.eyeBlinkRight, .eyeBlinkLeft]
+    static let allStates: [FaceState] = [.eyeBlinkLeft, .eyeBlinkRight, .jawOpen, .browInnerUp]
 }

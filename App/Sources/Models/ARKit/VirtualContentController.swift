@@ -8,6 +8,7 @@ import SceneKit
 
 /// For forwarding `ARSCNViewDelegate` messages to the object controlling the currently visible virtual content.
 protocol VirtualContentController: ARSCNViewDelegate {
+    var flowDelegate: TexturedFaceDelegate? { get set }
     /// The root node for the virtual content.
     var contentNode: SCNNode? { get set }
 

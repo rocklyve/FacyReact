@@ -61,7 +61,10 @@ extension MainFlowController: MainFlowDelegate {
         // TODO: Start timer
         GameTimer.global.flowDelegate = self
         GameTimer.global.startTimer()
-        //
+
+        Game.shared.newRandomCurrentState()
+        mainViewCtrl.gameActionLabel.isHidden = false
+        mainViewCtrl.gameActionLabel.text = Game.shared.getCurrentStateAsString()
     }
 
     func prepareGameStart() {
@@ -82,6 +85,7 @@ extension MainFlowController: GameTimerDelegate {
     func timerHasEnded() {
         // put button back to normal position
         mainViewCtrl.startPlayButton.setTitle("retry", for: .normal)
+        mainViewCtrl.gameActionLabel.isHidden = true
         // text should be displayed as "retry"
     }
 
