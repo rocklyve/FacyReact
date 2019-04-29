@@ -19,13 +19,13 @@
 		3882DFDA227301A900594D69 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFD9227301A900594D69 /* Game.swift */; };
 		3882DFDC227371E300594D69 /* MainViewControllerAnimationExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */; };
 		3882DFDE2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */; };
-		38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */; };
-		38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */; };
-		38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */; };
-		38FC7F8B2270AA820026D241 /* ManualConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F852270AA820026D241 /* ManualConnectionCell.swift */; };
-		38FC7F942270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F902270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift */; };
-		38FC7F952270AAF40026D241 /* BluetoothConnectorStateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F922270AAF40026D241 /* BluetoothConnectorStateObserver.swift */; };
-		38FC7F962270AAF40026D241 /* BluetoothConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F932270AAF40026D241 /* BluetoothConnector.swift */; };
+		38DE08EA2276F338000C0CBF /* BluetoothConnectorNotificationPostMaster.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08E62276F338000C0CBF /* BluetoothConnectorNotificationPostMaster.swift */; };
+		38DE08EB2276F338000C0CBF /* BluetoothConnectorStateObserver.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08E82276F338000C0CBF /* BluetoothConnectorStateObserver.swift */; };
+		38DE08EC2276F338000C0CBF /* BluetoothConnector.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08E92276F338000C0CBF /* BluetoothConnector.swift */; };
+		38DE08F12276F43F000C0CBF /* ManualConnectionTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08ED2276F43E000C0CBF /* ManualConnectionTableViewController.swift */; };
+		38DE08F22276F43F000C0CBF /* ManualConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08EE2276F43E000C0CBF /* ManualConnectionCell.swift */; };
+		38DE08F32276F43F000C0CBF /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08EF2276F43E000C0CBF /* ManualConnectionFlowController.swift */; };
+		38DE08F42276F43F000C0CBF /* ManualConnectionScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08F02276F43E000C0CBF /* ManualConnectionScanCell.swift */; };
 		38FC7F982270AB330026D241 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */; };
 		38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */; };
 		38FC7F9D2270AE490026D241 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9C2270AE490026D241 /* Images.swift */; };
@@ -130,13 +130,13 @@
 		3882DFD9227301A900594D69 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		3882DFDB227371E300594D69 /* MainViewControllerAnimationExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerAnimationExtension.swift; sourceTree = "<group>"; };
 		3882DFDD2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewControllerARFaceKitExtension.swift; sourceTree = "<group>"; };
-		38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionFlowController.swift; sourceTree = "<group>"; };
-		38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionTableViewController.swift; sourceTree = "<group>"; };
-		38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionScanCell.swift; sourceTree = "<group>"; };
-		38FC7F852270AA820026D241 /* ManualConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ManualConnectionCell.swift; sourceTree = "<group>"; };
-		38FC7F902270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnectorNotificationPostMaster.swift; sourceTree = "<group>"; };
-		38FC7F922270AAF40026D241 /* BluetoothConnectorStateObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnectorStateObserver.swift; sourceTree = "<group>"; };
-		38FC7F932270AAF40026D241 /* BluetoothConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnector.swift; sourceTree = "<group>"; };
+		38DE08E62276F338000C0CBF /* BluetoothConnectorNotificationPostMaster.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnectorNotificationPostMaster.swift; sourceTree = "<group>"; };
+		38DE08E82276F338000C0CBF /* BluetoothConnectorStateObserver.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnectorStateObserver.swift; sourceTree = "<group>"; };
+		38DE08E92276F338000C0CBF /* BluetoothConnector.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BluetoothConnector.swift; sourceTree = "<group>"; };
+		38DE08ED2276F43E000C0CBF /* ManualConnectionTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualConnectionTableViewController.swift; path = App/Sources/ScreenFlows/ConnectBleDevice/ManualConnectionTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		38DE08EE2276F43E000C0CBF /* ManualConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualConnectionCell.swift; path = App/Sources/ScreenFlows/ConnectBleDevice/ManualConnectionCell.swift; sourceTree = SOURCE_ROOT; };
+		38DE08EF2276F43E000C0CBF /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualConnectionFlowController.swift; path = App/Sources/ScreenFlows/ConnectBleDevice/ManualConnectionFlowController.swift; sourceTree = SOURCE_ROOT; };
+		38DE08F02276F43E000C0CBF /* ManualConnectionScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualConnectionScanCell.swift; path = App/Sources/ScreenFlows/ConnectBleDevice/ManualConnectionScanCell.swift; sourceTree = SOURCE_ROOT; };
 		38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = "../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Extensions/UIViewControllerExtension.swift"; sourceTree = "<group>"; };
 		38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftEntryKitOptions.swift; path = "../../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Elements/Views/SwiftEntryKitOptions.swift"; sourceTree = "<group>"; };
 		38FC7F9C2270AE490026D241 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
@@ -251,6 +251,32 @@
 			path = Game;
 			sourceTree = "<group>";
 		};
+		38DE08E42276F338000C0CBF /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				38DE08E52276F338000C0CBF /* PostMaster */,
+				38DE08E72276F338000C0CBF /* StateObserver */,
+				38DE08E92276F338000C0CBF /* BluetoothConnector.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		38DE08E52276F338000C0CBF /* PostMaster */ = {
+			isa = PBXGroup;
+			children = (
+				38DE08E62276F338000C0CBF /* BluetoothConnectorNotificationPostMaster.swift */,
+			);
+			path = PostMaster;
+			sourceTree = "<group>";
+		};
+		38DE08E72276F338000C0CBF /* StateObserver */ = {
+			isa = PBXGroup;
+			children = (
+				38DE08E82276F338000C0CBF /* BluetoothConnectorStateObserver.swift */,
+			);
+			path = StateObserver;
+			sourceTree = "<group>";
+		};
 		38FC7F792270AA330026D241 /* MenuItems */ = {
 			isa = PBXGroup;
 			children = (
@@ -273,40 +299,13 @@
 		38FC7F802270AA820026D241 /* ConnectBleDevice */ = {
 			isa = PBXGroup;
 			children = (
-				38FC7F822270AA820026D241 /* ManualConnectionFlowController.swift */,
-				38FC7F832270AA820026D241 /* ManualConnectionTableViewController.swift */,
-				38FC7F842270AA820026D241 /* ManualConnectionScanCell.swift */,
-				38FC7F852270AA820026D241 /* ManualConnectionCell.swift */,
+				38DE08EE2276F43E000C0CBF /* ManualConnectionCell.swift */,
+				38DE08EF2276F43E000C0CBF /* ManualConnectionFlowController.swift */,
+				38DE08F02276F43E000C0CBF /* ManualConnectionScanCell.swift */,
+				38DE08ED2276F43E000C0CBF /* ManualConnectionTableViewController.swift */,
 			);
 			name = ConnectBleDevice;
 			path = "../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/ScreenFlows/ConnectBleDevice";
-			sourceTree = "<group>";
-		};
-		38FC7F8E2270AAF40026D241 /* Bluetooth */ = {
-			isa = PBXGroup;
-			children = (
-				38FC7F8F2270AAF40026D241 /* PostMaster */,
-				38FC7F912270AAF40026D241 /* StateObserver */,
-				38FC7F932270AAF40026D241 /* BluetoothConnector.swift */,
-			);
-			name = Bluetooth;
-			path = "../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Networking/Bluetooth";
-			sourceTree = "<group>";
-		};
-		38FC7F8F2270AAF40026D241 /* PostMaster */ = {
-			isa = PBXGroup;
-			children = (
-				38FC7F902270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift */,
-			);
-			path = PostMaster;
-			sourceTree = "<group>";
-		};
-		38FC7F912270AAF40026D241 /* StateObserver */ = {
-			isa = PBXGroup;
-			children = (
-				38FC7F922270AAF40026D241 /* BluetoothConnectorStateObserver.swift */,
-			);
-			path = StateObserver;
 			sourceTree = "<group>";
 		};
 		38FC7F992270AB780026D241 /* Views */ = {
@@ -515,7 +514,7 @@
 		8298175E20DBB60C0021ED19 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
-				38FC7F8E2270AAF40026D241 /* Bluetooth */,
+				38DE08E42276F338000C0CBF /* Bluetooth */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -864,31 +863,31 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				38DE08EC2276F338000C0CBF /* BluetoothConnector.swift in Sources */,
 				823F743C1ED8679D0022317D /* Storyboards.swift in Sources */,
 				823F74061ED84DAC0022317D /* MainViewController.swift in Sources */,
-				38FC7F952270AAF40026D241 /* BluetoothConnectorStateObserver.swift in Sources */,
 				38FC7F9D2270AE490026D241 /* Images.swift in Sources */,
+				38DE08F32276F43F000C0CBF /* ManualConnectionFlowController.swift in Sources */,
 				38FC7F9F2270C9150026D241 /* TexturedFace.swift in Sources */,
-				38FC7F892270AA820026D241 /* ManualConnectionTableViewController.swift in Sources */,
 				38FC7FA12270CB070026D241 /* VirtualContentController.swift in Sources */,
-				38FC7F962270AAF40026D241 /* BluetoothConnector.swift in Sources */,
-				38FC7F882270AA820026D241 /* ManualConnectionFlowController.swift in Sources */,
-				38FC7F942270AAF40026D241 /* BluetoothConnectorNotificationPostMaster.swift in Sources */,
+				38DE08EA2276F338000C0CBF /* BluetoothConnectorNotificationPostMaster.swift in Sources */,
 				3882DFDA227301A900594D69 /* Game.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
+				38DE08F42276F43F000C0CBF /* ManualConnectionScanCell.swift in Sources */,
 				388144D82271F97F0013442D /* GameTimer.swift in Sources */,
 				8218E4EE2211E9B8007AAAF3 /* MainFlowController.swift in Sources */,
-				38FC7F8B2270AA820026D241 /* ManualConnectionCell.swift in Sources */,
-				38FC7F8A2270AA820026D241 /* ManualConnectionScanCell.swift in Sources */,
 				388144D62271CC8A0013442D /* FaceState.swift in Sources */,
 				8218E4E62211E1DA007AAAF3 /* BartyCrouch.swift in Sources */,
 				3882DFDE2273726C00594D69 /* MainViewControllerARFaceKitExtension.swift in Sources */,
 				82CC295720DBDB2000C61C6E /* Logger.swift in Sources */,
 				823F74051ED84DAC0022317D /* AppDelegate.swift in Sources */,
+				38DE08EB2276F338000C0CBF /* BluetoothConnectorStateObserver.swift in Sources */,
 				388144D32271C7970013442D /* SettingsCell.swift in Sources */,
 				3882DFDC227371E300594D69 /* MainViewControllerAnimationExtension.swift in Sources */,
+				38DE08F22276F43F000C0CBF /* ManualConnectionCell.swift in Sources */,
 				388144D22271C7970013442D /* SettingsFlowController.swift in Sources */,
 				828A920F22146058005B38B5 /* ErrorHandler.swift in Sources */,
+				38DE08F12276F43F000C0CBF /* ManualConnectionTableViewController.swift in Sources */,
 				38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */,
 				388144D42271C7970013442D /* SettingsTableViewController.swift in Sources */,
 				8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */,
@@ -1010,7 +1009,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -1066,7 +1065,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -1089,6 +1088,7 @@
 					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1096,6 +1096,7 @@
 				OTHER_SWIFT_FLAGS = "-D DEBUG";
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.FacyReact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1110,12 +1111,14 @@
 					"$(PROJECT_DIR)/Dependencies/iOS",
 				);
 				INFOPLIST_FILE = "$(SRCROOT)/App/SupportingFiles/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamitlabs.FacyReact;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

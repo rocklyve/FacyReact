@@ -38,7 +38,7 @@ internal enum L10n {
   internal enum ManualConnection {
     /// Search
     internal static let scanCellTitle = L10n.tr("Localizable", "ManualConnection.scanCellTitle")
-    /// ### devices found. Would you like to search for more devices?
+    /// Would you like to search for more devices?
     internal static let searchTitle = L10n.tr("Localizable", "ManualConnection.searchTitle")
     /// Stop
     internal static let stopScan = L10n.tr("Localizable", "ManualConnection.stopScan")

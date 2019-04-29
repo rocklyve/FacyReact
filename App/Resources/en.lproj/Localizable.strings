@@ -15,7 +15,7 @@
 
 "ManualConnection.scanCellTitle" = "Search";
 
-"ManualConnection.searchTitle" = "### devices found. Would you like to search for more devices?";
+"ManualConnection.searchTitle" = "Would you like to search for more devices?";
 
 "ManualConnection.stopScan" = "Stop";
 
