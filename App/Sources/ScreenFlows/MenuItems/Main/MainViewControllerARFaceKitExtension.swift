@@ -48,24 +48,26 @@ extension MainViewController {
 
 extension MainViewController: ARSCNViewDelegate {
     func renderer(_ renderer: SCNSceneRenderer, didAdd node: SCNNode, for anchor: ARAnchor) {
-        guard let faceAnchor = anchor as? ARFaceAnchor else { return }
-        currentFaceAnchor = faceAnchor
-
-        // If this is the first time with this anchor, get the controller to create content.
-        // Otherwise (switching content), will change content when setting `selectedVirtualContent`.
-        if node.childNodes.isEmpty, let contentNode = contentController.renderer(renderer, nodeFor: faceAnchor) {
-            node.addChildNode(contentNode)
+        DispatchQueue.global().async {
+            guard let faceAnchor = anchor as? ARFaceAnchor else { return }
+            self.currentFaceAnchor = faceAnchor
+            
+            // If this is the first time with this anchor, get the controller to create content.
+            // Otherwise (switching content), will change content when setting `selectedVirtualContent`.
+            if node.childNodes.isEmpty, let contentNode = self.contentController.renderer(renderer, nodeFor: faceAnchor) {
+                node.addChildNode(contentNode)
+            }
         }
     }
 
     /// - Tag: ARFaceGeometryUpdate
     func renderer(_ renderer: SCNSceneRenderer, didUpdate node: SCNNode, for anchor: ARAnchor) {
-        guard anchor == currentFaceAnchor,
-            let contentNode = contentController.contentNode,
+        guard anchor == self.currentFaceAnchor,
+            let contentNode = self.contentController.contentNode,
             contentNode.parent == node
             else { return }
 
-        contentController.renderer(renderer, didUpdate: contentNode, for: anchor)
+        self.contentController.renderer(renderer, didUpdate: contentNode, for: anchor)
     }
 }
 

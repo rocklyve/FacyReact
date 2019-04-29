@@ -39,8 +39,8 @@ extension MainFlowController: MainFlowDelegate {
             GameTimer.global.flowDelegate = self
         }
         mainViewCtrl.startPlayButton.isUserInteractionEnabled = false
-        GameTimer.global.startTimer()
-        Game.shared.newRandomCurrentState()
+        Game.shared.start()
+        // show current action, will be hidden, when ble is activated
         mainViewCtrl.gameActionLabel.isHidden = false
         mainViewCtrl.gameActionLabel.text = Game.shared.getCurrentStateAsString()
     }

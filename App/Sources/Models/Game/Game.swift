@@ -3,7 +3,9 @@
 //  Copyright © 2019 DavidLaubenstein. All rights reserved.
 //
 
+import CoreBluetooth
 import Foundation
+import HandySwift
 
 class Game {
     // MARK: - Static Properties
@@ -17,8 +19,16 @@ class Game {
 
     var currentState: FaceState?
 
+    func start() {
+        GameTimer.global.startTimer()
+        newRandomCurrentState()
+        // vibrate now
+        BluetoothConnector.global.getAmountOfMotors()
+        BluetoothConnector.global.getMaxUpdateFrequency()
+    }
     func newRandomCurrentState() {
         currentState = FaceState.allStates.randomElement()
+        BluetoothConnector.global.changeGameState(state: currentState!)
     }
 
     func getCurrentStateAsString() -> String {

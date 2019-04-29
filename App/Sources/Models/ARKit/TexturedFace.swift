@@ -30,8 +30,9 @@ class TexturedFace: NSObject, VirtualContentController {
         material.diffuse.contents = Images.wireframeTexture
         material.lightingModel = .physicallyBased
 
-        contentNode = SCNNode(geometry: faceGeometry)
+        self.contentNode = SCNNode(geometry: faceGeometry)
         #endif
+
         return contentNode
     }
 
@@ -48,28 +49,28 @@ class TexturedFace: NSObject, VirtualContentController {
             let browInnerUp = blendShapes[.browInnerUp] as? Float
             else { return }
         if eyeBlinkLeft > 0.9 {
-            faceState.insert(.eyeBlinkLeft)
-            flowDelegate?.didChange(faceState)
+            self.faceState.insert(.eyeBlinkLeft)
+            self.flowDelegate?.didChange(self.faceState)
         } else {
-            faceState.remove(.eyeBlinkLeft)
+            self.faceState.remove(.eyeBlinkLeft)
         }
         if eyeBlinkRight > 0.8 {
-            faceState.insert(.eyeBlinkRight)
-            flowDelegate?.didChange(faceState)
+            self.faceState.insert(.eyeBlinkRight)
+            self.flowDelegate?.didChange(self.faceState)
         } else {
-            faceState.remove(.eyeBlinkRight)
+            self.faceState.remove(.eyeBlinkRight)
         }
         if browInnerUp > 0.9 {
-            faceState.insert(.browInnerUp)
-            flowDelegate?.didChange(faceState)
+            self.faceState.insert(.browInnerUp)
+            self.flowDelegate?.didChange(self.faceState)
         } else {
-            faceState.remove(.browInnerUp)
+            self.faceState.remove(.browInnerUp)
         }
         if jawOpen > 0.8 {
-            faceState.insert(.jawOpen)
-            flowDelegate?.didChange(faceState)
+            self.faceState.insert(.jawOpen)
+            self.flowDelegate?.didChange(self.faceState)
         } else {
-            faceState.remove(.jawOpen)
+            self.faceState.remove(.jawOpen)
         }
     }
 }
