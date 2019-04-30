@@ -26,6 +26,7 @@ class Game {
         BluetoothConnector.global.getAmountOfMotors()
         BluetoothConnector.global.getMaxUpdateFrequency()
     }
+
     func newRandomCurrentState() {
         currentState = FaceState.allStates.randomElement()
         BluetoothConnector.global.changeGameState(state: currentState!)
