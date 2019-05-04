@@ -109,8 +109,8 @@ class MainViewController: UIViewController, ARSessionDelegate {
         contentController.flowDelegate = self
 
         NotificationCenter.default.addObserver(
-            self, selector:
-            #selector(connectionStateChanged),
+            self,
+            selector: #selector(connectionStateChanged),
             name: BluetoothConnectorNotificationPostMaster.didUpdateConnectionNotification,
             object: nil
         )
@@ -137,6 +137,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
                     target: self,
                     action: #selector(self.bleConnectionPressed)
                 )
+                self.gameActionLabel.isHidden = true
                 self.navigationItem.leftBarButtonItem?.tintColor = .green
             }
         } else {

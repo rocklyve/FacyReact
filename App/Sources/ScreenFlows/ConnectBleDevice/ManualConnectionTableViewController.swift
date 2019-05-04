@@ -68,7 +68,12 @@ class ManualConnectionTableViewController: UITableViewController {
         tableView.register(ManualConnectionScanCell.self, forCellReuseIdentifier: cellScanReuseIdentifier)
         tableView.separatorStyle = .none
 
-        NotificationCenter.default.addObserver(self, selector: #selector(updateTableViewForNewDevices(_:)), name: BluetoothConnectorNotificationPostMaster.peripheralDiscoverUpdateNotification, object: nil)
+        NotificationCenter.default.addObserver(
+            self,
+            selector: #selector(updateTableViewForNewDevices(_:)),
+            name: BluetoothConnectorNotificationPostMaster.peripheralDiscoverUpdateNotification,
+            object: nil
+        )
     }
 
     @objc

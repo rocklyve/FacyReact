@@ -75,10 +75,10 @@ extension BluetoothConnectorStateObserver: CBCentralManagerDelegate {
     }
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String: Any], rssi RSSI: NSNumber) {
-        if peripheral.name?.contains("TECO") ?? false {
+        //if peripheral.name?.contains("TECO") ?? false {
             log.info("CBCentralManager did discover \(peripheral.name ?? "Unknown") with uuid: \(peripheral.identifier.uuidString)")
             discoveredDevices.append(peripheral)
-        }
+        //}
     }
 
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
@@ -97,6 +97,9 @@ extension BluetoothConnectorStateObserver: CBCentralManagerDelegate {
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         log.info("CBCentralManager did disconnect: \(peripheral.name ?? "Unknown")")
         self.connectedPeripheral = nil
+        self.wearableCharacteristic01 = nil
+        self.wearableCharacteristic02 = nil
+        self.wearableCharacteristic03 = nil
     }
 }
 
@@ -113,7 +116,7 @@ extension BluetoothConnectorStateObserver: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didDiscoverCharacteristicsFor service: CBService, error: Error?) {
         log.info("*******************************************************")
 
-        if ((error) != nil) {
+        if error != nil {
             log.info("Error discovering services: \(error!.localizedDescription)")
             return
         }
@@ -139,13 +142,16 @@ extension BluetoothConnectorStateObserver: CBPeripheralDelegate {
     func peripheral(_ peripheral: CBPeripheral, didUpdateValueFor characteristic: CBCharacteristic, error: Error?) {
         switch characteristic.uuid.uuidString {
         case wearableUUIDCharacteristic01:
-            print(characteristic.value?.first ?? "no value")
+            log.info(characteristic.value?.first ?? "no value")
+
         case wearableUUIDCharacteristic02:
-            print(characteristic.value?.first ?? "no value")
+            log.info(characteristic.value?.first ?? "no value")
+
         case wearableUUIDCharacteristic03:
-            print(characteristic.value)
+            log.info(characteristic.value)
+
         default:
-            log.error("error")
+            log.debug("error")
         }
     }
 }

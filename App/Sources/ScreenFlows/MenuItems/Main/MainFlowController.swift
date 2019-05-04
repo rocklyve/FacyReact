@@ -41,7 +41,9 @@ extension MainFlowController: MainFlowDelegate {
         mainViewCtrl.startPlayButton.isUserInteractionEnabled = false
         Game.shared.start()
         // show current action, will be hidden, when ble is activated
-        mainViewCtrl.gameActionLabel.isHidden = false
+        if !BluetoothConnector.global.isConnected {
+            mainViewCtrl.gameActionLabel.isHidden = false
+        }
         mainViewCtrl.gameActionLabel.text = Game.shared.getCurrentStateAsString()
     }
 

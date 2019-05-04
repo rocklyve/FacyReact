@@ -108,11 +108,12 @@ final class BluetoothConnector {
 
         case FaceState.jawOpen:
             connectedPeripheral?.writeValue(Data(_: [0x00, 0x00, 0x00, 0xFF]), for: characteristics3, type: .withoutResponse)
+
         default:
-            log.info("error")
+            log.debug("error")
         }
         delay(by: .milliseconds(500)) {
-            self.connectedPeripheral?.writeValue(Data(bytes: [0x00, 0x00, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
+            self.connectedPeripheral?.writeValue(Data(_: [0x00, 0x00, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
         }
     }
 }

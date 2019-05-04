@@ -51,7 +51,7 @@ extension MainViewController: ARSCNViewDelegate {
         DispatchQueue.global().async {
             guard let faceAnchor = anchor as? ARFaceAnchor else { return }
             self.currentFaceAnchor = faceAnchor
-            
+
             // If this is the first time with this anchor, get the controller to create content.
             // Otherwise (switching content), will change content when setting `selectedVirtualContent`.
             if node.childNodes.isEmpty, let contentNode = self.contentController.renderer(renderer, nodeFor: faceAnchor) {
@@ -74,7 +74,7 @@ extension MainViewController: ARSCNViewDelegate {
 extension MainViewController: TexturedFaceDelegate {
     func didChange(_ faceState: FaceState) {
         // if faceState == active state, then push counter + 1
-        if(Game.shared.currentState == faceState) {
+        if Game.shared.currentState == faceState {
             DispatchQueue.main.async {
                 var counter: Int = Int(self.gameCounterLabel.text!)!
                 counter += 1

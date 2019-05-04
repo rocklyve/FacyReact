@@ -26,8 +26,8 @@
 		38DE08F22276F43F000C0CBF /* ManualConnectionCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08EE2276F43E000C0CBF /* ManualConnectionCell.swift */; };
 		38DE08F32276F43F000C0CBF /* ManualConnectionFlowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08EF2276F43E000C0CBF /* ManualConnectionFlowController.swift */; };
 		38DE08F42276F43F000C0CBF /* ManualConnectionScanCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE08F02276F43E000C0CBF /* ManualConnectionScanCell.swift */; };
+		38DE090D227D7CFC000C0CBF /* SwiftEntryKitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38DE090C227D7CFC000C0CBF /* SwiftEntryKitOptions.swift */; };
 		38FC7F982270AB330026D241 /* UIViewControllerExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */; };
-		38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */; };
 		38FC7F9D2270AE490026D241 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9C2270AE490026D241 /* Images.swift */; };
 		38FC7F9F2270C9150026D241 /* TexturedFace.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7F9E2270C9150026D241 /* TexturedFace.swift */; };
 		38FC7FA12270CB070026D241 /* VirtualContentController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 38FC7FA02270CB070026D241 /* VirtualContentController.swift */; };
@@ -137,8 +137,8 @@
 		38DE08EE2276F43E000C0CBF /* ManualConnectionCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualConnectionCell.swift; path = App/Sources/ScreenFlows/ConnectBleDevice/ManualConnectionCell.swift; sourceTree = SOURCE_ROOT; };
 		38DE08EF2276F43E000C0CBF /* ManualConnectionFlowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualConnectionFlowController.swift; path = App/Sources/ScreenFlows/ConnectBleDevice/ManualConnectionFlowController.swift; sourceTree = SOURCE_ROOT; };
 		38DE08F02276F43E000C0CBF /* ManualConnectionScanCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManualConnectionScanCell.swift; path = App/Sources/ScreenFlows/ConnectBleDevice/ManualConnectionScanCell.swift; sourceTree = SOURCE_ROOT; };
+		38DE090C227D7CFC000C0CBF /* SwiftEntryKitOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftEntryKitOptions.swift; sourceTree = "<group>"; };
 		38FC7F972270AB330026D241 /* UIViewControllerExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UIViewControllerExtension.swift; path = "../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Extensions/UIViewControllerExtension.swift"; sourceTree = "<group>"; };
-		38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = SwiftEntryKitOptions.swift; path = "../../../../../../../../work/jamitlabs/Pegelmeter/pegelmeter-ios/App/Sources/Globals/Elements/Views/SwiftEntryKitOptions.swift"; sourceTree = "<group>"; };
 		38FC7F9C2270AE490026D241 /* Images.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		38FC7F9E2270C9150026D241 /* TexturedFace.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TexturedFace.swift; sourceTree = "<group>"; };
 		38FC7FA02270CB070026D241 /* VirtualContentController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VirtualContentController.swift; sourceTree = "<group>"; };
@@ -311,7 +311,7 @@
 		38FC7F992270AB780026D241 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				38FC7F9A2270AB840026D241 /* SwiftEntryKitOptions.swift */,
+				38DE090C227D7CFC000C0CBF /* SwiftEntryKitOptions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -873,6 +873,7 @@
 				38DE08EA2276F338000C0CBF /* BluetoothConnectorNotificationPostMaster.swift in Sources */,
 				3882DFDA227301A900594D69 /* Game.swift in Sources */,
 				823F743D1ED8679D0022317D /* Strings.swift in Sources */,
+				38DE090D227D7CFC000C0CBF /* SwiftEntryKitOptions.swift in Sources */,
 				38DE08F42276F43F000C0CBF /* ManualConnectionScanCell.swift in Sources */,
 				388144D82271F97F0013442D /* GameTimer.swift in Sources */,
 				8218E4EE2211E9B8007AAAF3 /* MainFlowController.swift in Sources */,
@@ -888,7 +889,6 @@
 				388144D22271C7970013442D /* SettingsFlowController.swift in Sources */,
 				828A920F22146058005B38B5 /* ErrorHandler.swift in Sources */,
 				38DE08F12276F43F000C0CBF /* ManualConnectionTableViewController.swift in Sources */,
-				38FC7F9B2270AB850026D241 /* SwiftEntryKitOptions.swift in Sources */,
 				388144D42271C7970013442D /* SettingsTableViewController.swift in Sources */,
 				8218E4EA2211E4A8007AAAF3 /* Assets.swift in Sources */,
 				38FC7F982270AB330026D241 /* UIViewControllerExtension.swift in Sources */,

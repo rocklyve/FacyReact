@@ -11,7 +11,7 @@ protocol TexturedFaceDelegate: AnyObject {
 }
 
 class TexturedFace: NSObject, VirtualContentController {
-    var flowDelegate: TexturedFaceDelegate?
+    weak var flowDelegate: TexturedFaceDelegate?
 
     var contentNode: SCNNode?
     var faceState: FaceState = []
@@ -48,25 +48,25 @@ class TexturedFace: NSObject, VirtualContentController {
             let jawOpen = blendShapes[.jawOpen] as? Float,
             let browInnerUp = blendShapes[.browInnerUp] as? Float
             else { return }
-        if eyeBlinkLeft > 0.9 {
+        if eyeBlinkLeft > 0.7 {
             self.faceState.insert(.eyeBlinkLeft)
             self.flowDelegate?.didChange(self.faceState)
         } else {
             self.faceState.remove(.eyeBlinkLeft)
         }
-        if eyeBlinkRight > 0.8 {
+        if eyeBlinkRight > 0.7 {
             self.faceState.insert(.eyeBlinkRight)
             self.flowDelegate?.didChange(self.faceState)
         } else {
             self.faceState.remove(.eyeBlinkRight)
         }
-        if browInnerUp > 0.9 {
+        if browInnerUp > 0.7 {
             self.faceState.insert(.browInnerUp)
             self.flowDelegate?.didChange(self.faceState)
         } else {
             self.faceState.remove(.browInnerUp)
         }
-        if jawOpen > 0.8 {
+        if jawOpen > 0.6 {
             self.faceState.insert(.jawOpen)
             self.flowDelegate?.didChange(self.faceState)
         } else {
