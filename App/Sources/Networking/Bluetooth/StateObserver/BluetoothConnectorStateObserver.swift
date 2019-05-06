@@ -75,10 +75,10 @@ extension BluetoothConnectorStateObserver: CBCentralManagerDelegate {
     }
 
     func centralManager(_ central: CBCentralManager, didDiscover peripheral: CBPeripheral, advertisementData: [String: Any], rssi RSSI: NSNumber) {
-        //if peripheral.name?.contains("TECO") ?? false {
+        if peripheral.name?.contains("TECO") ?? false {
             log.info("CBCentralManager did discover \(peripheral.name ?? "Unknown") with uuid: \(peripheral.identifier.uuidString)")
             discoveredDevices.append(peripheral)
-        //}
+        }
     }
 
     func centralManager(_ central: CBCentralManager, didConnect peripheral: CBPeripheral) {
