@@ -98,16 +98,16 @@ final class BluetoothConnector {
         guard characteristics3.properties.contains(.write) else { return }
         switch state {
         case FaceState.browInnerUp:
-            connectedPeripheral?.writeValue(Data(_: [0xFF, 0x00, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
+            connectedPeripheral?.writeValue(Data(_: [0x00, 0x00, 0x00, 0xFF]), for: characteristics3, type: .withoutResponse)
 
         case FaceState.eyeBlinkLeft:
-            connectedPeripheral?.writeValue(Data(_: [0x00, 0xFF, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
+            connectedPeripheral?.writeValue(Data(_: [0xFF, 0x00, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
 
         case FaceState.eyeBlinkRight:
             connectedPeripheral?.writeValue(Data(_: [0x00, 0x00, 0xFF, 0x00]), for: characteristics3, type: .withoutResponse)
 
         case FaceState.jawOpen:
-            connectedPeripheral?.writeValue(Data(_: [0x00, 0x00, 0x00, 0xFF]), for: characteristics3, type: .withoutResponse)
+            connectedPeripheral?.writeValue(Data(_: [0x00, 0xFF, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
 
         default:
             log.debug("error")
