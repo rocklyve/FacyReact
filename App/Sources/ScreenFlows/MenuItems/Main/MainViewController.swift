@@ -20,13 +20,13 @@ class MainViewController: UIViewController, ARSessionDelegate {
 
     lazy var startPlayButton: UIButton = {
         let button = UIButton()
-        button.backgroundColor = Colors.Vibrants.softBlue
+        button.backgroundColor = Colors.Vibrants.orange
         button.layer.cornerRadius = 50
         button.setTitle("Start", for: .normal)
-        button.layer.shadowColor = UIColor.black.cgColor
+        button.layer.shadowColor = Colors.GrayScale.gray.cgColor
         button.layer.shadowOffset = CGSize(width: 5, height: 5)
-        button.layer.shadowRadius = 5
-        button.layer.shadowOpacity = 0.7
+        button.layer.shadowRadius = 15
+        button.layer.shadowOpacity = 0.4
         button.titleLabel?.font = UIFont.systemFont(ofSize: 32, weight: .regular)
         button.addTarget(self, action: #selector(startButtonPressed), for: .touchUpInside)
         return button
@@ -35,12 +35,12 @@ class MainViewController: UIViewController, ARSessionDelegate {
     lazy var gameCounterView: UIView = {
         let view = UIView()
         view.addSubview(gameCounterLabel)
-        view.backgroundColor = Colors.Vibrants.softBlue
+        view.backgroundColor = Colors.Vibrants.orange
         view.layer.cornerRadius = 50
-        view.layer.shadowColor = UIColor.black.cgColor
+        view.layer.shadowColor = Colors.GrayScale.gray.cgColor
         view.layer.shadowOffset = CGSize(width: 5, height: 5)
-        view.layer.shadowRadius = 5
-        view.layer.shadowOpacity = 0.7
+        view.layer.shadowRadius = 15
+        view.layer.shadowOpacity = 0.4
         return view
     }()
 
@@ -48,7 +48,7 @@ class MainViewController: UIViewController, ARSessionDelegate {
         let label = UILabel()
         label.textAlignment = .center
         label.font = UIFont.systemFont(ofSize: 32, weight: .regular)
-        label.backgroundColor = Colors.Vibrants.softBlue
+        label.backgroundColor = Colors.Vibrants.orange
         label.clipsToBounds = true
         label.layer.cornerRadius = 50
         label.textColor = .white

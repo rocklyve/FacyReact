@@ -41,7 +41,7 @@ class ManualConnectionScanCell: UITableViewCell {
     lazy var cellButton: UIButton = {
         let button = UIButton()
         button.contentHorizontalAlignment = .center
-        button.backgroundColor = Colors.Vibrants.deepBlue
+        button.backgroundColor = Colors.Vibrants.orange
         button.addTarget(self, action: #selector(discoveryStateChanged), for: .touchUpInside)
         button.layer.cornerRadius = 30
         button.layer.borderWidth = 0

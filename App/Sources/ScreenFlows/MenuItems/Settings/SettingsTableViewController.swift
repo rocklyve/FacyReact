@@ -36,31 +36,17 @@ class SettingsTableViewController: UITableViewController {
 
     var viewModel = SettingsViewModel(
         sections: [
-            SettingsViewModel.Section(
-                title: L10n.Settings.SectionTitle.app,
-                items: [
-                    SettingsCellModel(title: L10n.Settings.lockAutomation, subtitle: "1 Stunde", icon: Images.history)
-                ]
-            ),
             SettingsViewModel.Section (
                 title: L10n.Settings.SectionTitle.wearable,
                 items: [
                     SettingsCellModel(title: L10n.Settings.Wearable.wearable, subtitle: wearableConnection(), icon: Images.signal),
-                    SettingsCellModel(title: L10n.Settings.Wearable.resetWearable, subtitle: nil, icon: Images.history),
-                    SettingsCellModel(title: L10n.Settings.Wearable.deleteAllMeasurements, subtitle: nil, icon: Images.history),
-                    SettingsCellModel(title: L10n.Settings.Wearable.retryMeasurement, subtitle: "1 (Standardwert)", icon: Images.history)
+                    SettingsCellModel(title: L10n.Settings.Wearable.resetWearable, subtitle: nil, icon: Images.trash),
                 ]
             ),
             SettingsViewModel.Section(
-                title: L10n.Settings.SectionTitle.newMeasurement,
+                title: "Game",
                 items: [
-                    SettingsCellModel(title: L10n.Settings.NewMeasurement.referenceTypeStandard, subtitle: "Anschlussobjektnummer", icon: Images.history)
-                ]
-            ),
-            SettingsViewModel.Section(
-                title: L10n.Settings.SectionTitle.liveView,
-                items: [
-                    SettingsCellModel(title: L10n.Settings.LiveView.intervalStandard, subtitle: "3", icon: Images.history)
+                    SettingsCellModel(title: "Game time", subtitle: "30 sec", icon: Images.time)
                 ]
             )
         ]
@@ -90,7 +76,7 @@ class SettingsTableViewController: UITableViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-        viewModel.sections[1].items[0].subtitle = SettingsTableViewController.wearableConnection()
+        viewModel.sections[0].items[0].subtitle = SettingsTableViewController.wearableConnection()
     }
 
     @objc
@@ -153,9 +139,9 @@ class SettingsTableViewController: UITableViewController {
     @objc
     func updateTableViewForNewState(_ notification: Notification) {
         if BluetoothConnector.global.connectedPeripheral == nil {
-            viewModel.sections[1].items[0].subtitle = L10n.Settings.WearableStatus.notConnected
+            viewModel.sections[0].items[0].subtitle = L10n.Settings.WearableStatus.notConnected
         } else {
-            viewModel.sections[1].items[0].subtitle = BluetoothConnector.global.connectedPeripheral?.name ?? "Unknown"
+            viewModel.sections[0].items[0].subtitle = BluetoothConnector.global.connectedPeripheral?.name ?? "Unknown"
         }
         DispatchQueue.main.async { [weak self] in
             self?.tableView.reloadData()
@@ -170,8 +156,15 @@ class SettingsTableViewController: UITableViewController {
         case 0:
             switch indexPath.row {
             case 0:
-                // flowDelegate?.startNewMeasurement()
-                log.info("case 0")
+                if BluetoothConnector.global.isConnected {
+                    flowDelegate?.disconnectWearable()
+                    viewModel.sections[0].items[0].subtitle = SettingsTableViewController.wearableConnection()
+                } else {
+                    flowDelegate?.connectWearable()
+                }
+
+            case 1:
+                log.info("Not working atm.")
 
             default:
                 log.info("default")
@@ -180,40 +173,7 @@ class SettingsTableViewController: UITableViewController {
         case 1:
             switch indexPath.row {
             case 0:
-                if BluetoothConnector.global.isConnected {
-                    flowDelegate?.disconnectWearable()
-                    viewModel.sections[1].items[0].subtitle = SettingsTableViewController.wearableConnection()
-                } else {
-                    flowDelegate?.connectWearable()
-                }
-
-            case 1:
-                log.info("case 1")
-
-            case 2:
-                log.info("case 2")
-
-            case 3:
-                log.info("case 3")
-
-            default:
-                log.info("default")
-            }
-
-        case 2:
-            switch indexPath.row {
-            case 0:
-                log.info("case 0")
-
-            default:
-                anyMenuViewController?.contentViewController = MainViewController()
-                anyMenuViewController?.closeMenu()
-            }
-
-        case 3:
-            switch indexPath.row {
-            case 0:
-                log.info("case 0")
+                log.info("Not working atm.")
 
             default:
                 log.info("default")
