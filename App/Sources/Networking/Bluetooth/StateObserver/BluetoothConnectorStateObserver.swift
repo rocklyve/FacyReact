@@ -1,6 +1,6 @@
 //
-//  Created by Niklas Bülow on 02.04.19.
-//  Copyright © 2019 Jamit Labs GmbH. All rights reserved.
+//  Created by David Laubenstein on 02.04.19.
+//  Copyright © 2019 David Laubenstein. All rights reserved.
 //
 
 import CoreBluetooth
