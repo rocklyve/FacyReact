@@ -148,10 +148,10 @@ extension BluetoothConnectorStateObserver: CBPeripheralDelegate {
             log.info(characteristic.value?.first ?? "no value")
 
         case wearableUUIDCharacteristic03:
-            log.info(characteristic.value)
+            log.info(characteristic.value?.first ?? "no value")
 
         default:
-            log.debug("error")
+            log.info("error")
         }
     }
 }

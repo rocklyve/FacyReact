@@ -48,14 +48,14 @@ final class BluetoothConnector {
             // TODO: here a popup should appear for turning on Bluetooth
             return
         }
-        log.debug("Scanning started")
+        log.info("Scanning started")
         // TODO: serch for specific service
         centralManager.scanForPeripherals(withServices: [], options: nil)
     }
 
     /// Stops the discovery of peripherals
     func stopDiscovery() {
-        log.debug("Scanning stopped")
+        log.info("Scanning stopped")
         centralManager.stopScan()
     }
 
@@ -110,7 +110,7 @@ final class BluetoothConnector {
             connectedPeripheral?.writeValue(Data(_: [0x00, 0xFF, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
 
         default:
-            log.debug("error")
+            log.info("error")
         }
         delay(by: .milliseconds(500)) {
             self.connectedPeripheral?.writeValue(Data(_: [0x00, 0x00, 0x00, 0x00]), for: characteristics3, type: .withoutResponse)
