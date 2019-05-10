@@ -50,20 +50,6 @@ extension ManualConnectionFlowController: ManualConnectionFlowDelegate {
         DispatchQueue.main.async { [weak self] in
             guard let self = self else { return }
             NotificationCenter.default.removeObserver(self)
-            guard let name = BluetoothConnector.global.connectedPeripheral?.name else { return }
-            SwiftEntryKitOptions.addTopFloatMessage(
-                title: SwiftEntryKitOptions.StyledString(
-                    message: "Successfully connected",
-                    font: UIFont.systemFont(ofSize: 12, weight: .regular),
-                    color: Colors.GrayScale.white
-                ),
-                description: SwiftEntryKitOptions.StyledString(
-                    message: name,
-                    font: UIFont.systemFont(ofSize: 16, weight: .bold),
-                    color: Colors.GrayScale.white
-                ),
-                backgroundColor: Colors.Feedback.success
-            )
 
             self.navigationCtrl.dismiss(animated: false) {
                 BluetoothConnector.global.stopDiscovery()

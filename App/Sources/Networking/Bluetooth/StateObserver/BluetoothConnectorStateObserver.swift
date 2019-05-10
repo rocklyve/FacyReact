@@ -87,15 +87,24 @@ extension BluetoothConnectorStateObserver: CBCentralManagerDelegate {
         central.stopScan()
         peripheral.delegate = self
         peripheral.discoverServices([serviceType])
+        DispatchQueue.main.async {
+            BannerManager.displayTopNoteMessage(title: "Successfully connected", subtitle: peripheral.name, style: .success)
+        }
     }
 
     func centralManager(_ central: CBCentralManager, didFailToConnect peripheral: CBPeripheral, error: Error?) {
         log.info("CBCentralManager did fail to connect to: \(peripheral.name ?? "Unknown")")
+        DispatchQueue.main.async {
+            BannerManager.displayTopNoteMessage(title: "Failed to connect", subtitle: peripheral.name, style: .failure)
+        }
         self.connectedPeripheral = nil
     }
 
     func centralManager(_ central: CBCentralManager, didDisconnectPeripheral peripheral: CBPeripheral, error: Error?) {
         log.info("CBCentralManager did disconnect: \(peripheral.name ?? "Unknown")")
+        DispatchQueue.main.async {
+            BannerManager.displayTopNoteMessage(title: "Disconnect", subtitle: peripheral.name, style: .warning)
+        }
         self.connectedPeripheral = nil
         self.wearableCharacteristic01 = nil
         self.wearableCharacteristic02 = nil
