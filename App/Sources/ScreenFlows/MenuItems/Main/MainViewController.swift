@@ -118,11 +118,9 @@ class MainViewController: UIViewController, ARSessionDelegate {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
-
         // AR experiences typically involve moving the device without
         // touch input for some time, so prevent auto screen dimming.
         UIApplication.shared.isIdleTimerDisabled = true
-
         // "Reset" to run the AR session for the first time.
         resetTracking()
     }
