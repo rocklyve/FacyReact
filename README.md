@@ -29,3 +29,8 @@ alt="License: MIT">
 ## Installation
 
 To run the project, you have to use <a href="https://github.com/JamitLabs/Accio">Accio</a> as the dependency manager. So look at the installation instruction there and run `accio update` to install all dependencies.
+
+## Demo
+
+To have a quick look at the game, here is a demo:
+
