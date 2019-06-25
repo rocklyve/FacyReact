@@ -34,3 +34,4 @@ To run the project, you have to use <a href="https://github.com/JamitLabs/Accio"
 
 To have a quick look at the game, here is a demo:
 
+![FacyReact Demo](https://gifs.com/gif/facyreactdemo-WLwx1v)
